@@ -11,6 +11,7 @@
 		AE324C4A27FDE4AA009AF642 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE324C4927FDE4AA009AF642 /* ContentView.swift */; };
 		AE324C4C27FDE4AD009AF642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE324C4B27FDE4AD009AF642 /* Assets.xcassets */; };
 		AE324C4F27FDE4AD009AF642 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE324C4E27FDE4AD009AF642 /* Preview Assets.xcassets */; };
+		AE4CFAB8280534A0001292F4 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4CFAB7280534A0001292F4 /* Splash.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		AE324C4927FDE4AA009AF642 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AE324C4B27FDE4AD009AF642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE324C4E27FDE4AD009AF642 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AE4CFAB7280534A0001292F4 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		AE4CFABB28053865001292F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,8 @@
 		AE324C4627FDE4AA009AF642 /* GongGalBBang */ = {
 			isa = PBXGroup;
 			children = (
+				AE4CFABB28053865001292F4 /* Info.plist */,
+				AE4CFAB628053488001292F4 /* splash */,
 				AE324C4727FDE4AA009AF642 /* GongGalBBangApp.swift */,
 				AE324C4927FDE4AA009AF642 /* ContentView.swift */,
 				AE324C4B27FDE4AD009AF642 /* Assets.xcassets */,
@@ -65,6 +70,14 @@
 				AE324C4E27FDE4AD009AF642 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AE4CFAB628053488001292F4 /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				AE4CFAB7280534A0001292F4 /* Splash.swift */,
+			);
+			path = splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE324C4A27FDE4AA009AF642 /* ContentView.swift in Sources */,
+				AE4CFAB8280534A0001292F4 /* Splash.swift in Sources */,
 				AE324C4827FDE4AA009AF642 /* GongGalBBangApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,9 +286,9 @@
 				DEVELOPMENT_TEAM = JZ6K78RF5K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GongGalBBang/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -301,9 +315,9 @@
 				DEVELOPMENT_TEAM = JZ6K78RF5K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GongGalBBang/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
