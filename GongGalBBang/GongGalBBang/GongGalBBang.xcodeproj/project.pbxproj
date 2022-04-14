@@ -12,6 +12,7 @@
 		AE324C4C27FDE4AD009AF642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE324C4B27FDE4AD009AF642 /* Assets.xcassets */; };
 		AE324C4F27FDE4AD009AF642 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE324C4E27FDE4AD009AF642 /* Preview Assets.xcassets */; };
 		AE4CFAB8280534A0001292F4 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4CFAB7280534A0001292F4 /* Splash.swift */; };
+		AEFD89DA2807DDB000CFC148 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFD89D92807DDB000CFC148 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		AE324C4E27FDE4AD009AF642 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AE4CFAB7280534A0001292F4 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		AE4CFABB28053865001292F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEFD89D92807DDB000CFC148 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				AE324C4927FDE4AA009AF642 /* ContentView.swift */,
 				AE324C4B27FDE4AD009AF642 /* Assets.xcassets */,
 				AE324C4D27FDE4AD009AF642 /* Preview Content */,
+				AEFD89D92807DDB000CFC148 /* SignUpView.swift */,
 			);
 			path = GongGalBBang;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEFD89DA2807DDB000CFC148 /* SignUpView.swift in Sources */,
 				AE324C4A27FDE4AA009AF642 /* ContentView.swift in Sources */,
 				AE4CFAB8280534A0001292F4 /* Splash.swift in Sources */,
 				AE324C4827FDE4AA009AF642 /* GongGalBBangApp.swift in Sources */,
