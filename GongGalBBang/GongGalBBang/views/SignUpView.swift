@@ -114,16 +114,6 @@ struct CheckboxStyle: ToggleStyle {
     }
 }
 
-struct SignUpStyle: ButtonStyle {
-  func makeBody(configuration: Configuration) -> some View {
-    configuration.label
-      .frame(minWidth: 100, idealWidth: 0, maxWidth: 500, minHeight: 50, idealHeight: 0, maxHeight: 50, alignment: .center)
-      .foregroundColor(Color.black)
-      .background(Color.black)
-      .cornerRadius(8)
-  }
-}
-
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()

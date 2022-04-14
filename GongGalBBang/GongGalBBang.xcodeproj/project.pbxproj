@@ -7,27 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE324C4827FDE4AA009AF642 /* GongGalBBangApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE324C4727FDE4AA009AF642 /* GongGalBBangApp.swift */; };
-		AE324C4A27FDE4AA009AF642 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE324C4927FDE4AA009AF642 /* LogInView.swift */; };
-		AE324C4C27FDE4AD009AF642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE324C4B27FDE4AD009AF642 /* Assets.xcassets */; };
-		AE324C4F27FDE4AD009AF642 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE324C4E27FDE4AD009AF642 /* Preview Assets.xcassets */; };
-		AE4CFAB8280534A0001292F4 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4CFAB7280534A0001292F4 /* Splash.swift */; };
-		AEFD89DA2807DDB000CFC148 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFD89D92807DDB000CFC148 /* SignUpView.swift */; };
+		AE3D91E02807F5310045721C /* GongGalBBangApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */; };
+		AE3D91E22807F5310045721C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91E12807F5310045721C /* ContentView.swift */; };
+		AE3D91E42807F5310045721C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3D91E32807F5310045721C /* Assets.xcassets */; };
+		AE3D91E72807F5310045721C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3D91E62807F5310045721C /* Preview Assets.xcassets */; };
+		AE3D91EF2807F55A0045721C /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91EE2807F55A0045721C /* LogInView.swift */; };
+		AE3D91F12807F59B0045721C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91F02807F59B0045721C /* MainView.swift */; };
+		AE3D91F32807F5A30045721C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91F22807F5A30045721C /* SignUpView.swift */; };
+		AE3D91F62807F5EB0045721C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91F52807F5EB0045721C /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AE324C4427FDE4AA009AF642 /* GongGalBBang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GongGalBBang.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE324C4727FDE4AA009AF642 /* GongGalBBangApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GongGalBBangApp.swift; sourceTree = "<group>"; };
-		AE324C4927FDE4AA009AF642 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
-		AE324C4B27FDE4AD009AF642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AE324C4E27FDE4AD009AF642 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AE4CFAB7280534A0001292F4 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
-		AE4CFABB28053865001292F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AEFD89D92807DDB000CFC148 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		AE3D91DC2807F5310045721C /* GongGalBBang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GongGalBBang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GongGalBBangApp.swift; sourceTree = "<group>"; };
+		AE3D91E12807F5310045721C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AE3D91E32807F5310045721C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE3D91E62807F5310045721C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AE3D91EE2807F55A0045721C /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		AE3D91F02807F59B0045721C /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AE3D91F22807F5A30045721C /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		AE3D91F52807F5EB0045721C /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		AE3D91F72807F63F0045721C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AE324C4127FDE4AA009AF642 /* Frameworks */ = {
+		AE3D91D92807F5310045721C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,62 +41,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AE324C3B27FDE4AA009AF642 = {
+		AE3D91D32807F5310045721C = {
 			isa = PBXGroup;
 			children = (
-				AE324C4627FDE4AA009AF642 /* GongGalBBang */,
-				AE324C4527FDE4AA009AF642 /* Products */,
+				AE3D91DE2807F5310045721C /* GongGalBBang */,
+				AE3D91DD2807F5310045721C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AE324C4527FDE4AA009AF642 /* Products */ = {
+		AE3D91DD2807F5310045721C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AE324C4427FDE4AA009AF642 /* GongGalBBang.app */,
+				AE3D91DC2807F5310045721C /* GongGalBBang.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AE324C4627FDE4AA009AF642 /* GongGalBBang */ = {
+		AE3D91DE2807F5310045721C /* GongGalBBang */ = {
 			isa = PBXGroup;
 			children = (
-				AE4CFABB28053865001292F4 /* Info.plist */,
-				AE4CFAB628053488001292F4 /* splash */,
-				AE324C4727FDE4AA009AF642 /* GongGalBBangApp.swift */,
-				AE324C4927FDE4AA009AF642 /* LogInView.swift */,
-				AEFD89D92807DDB000CFC148 /* SignUpView.swift */,
-				AE324C4B27FDE4AD009AF642 /* Assets.xcassets */,
-				AE324C4D27FDE4AD009AF642 /* Preview Content */,
+				AE3D91F72807F63F0045721C /* Info.plist */,
+				AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */,
+				AE3D91ED2807F5370045721C /* views */,
+				AE3D91F42807F5A80045721C /* models */,
+				AE3D91E12807F5310045721C /* ContentView.swift */,
+				AE3D91E32807F5310045721C /* Assets.xcassets */,
+				AE3D91E52807F5310045721C /* Preview Content */,
 			);
 			path = GongGalBBang;
 			sourceTree = "<group>";
 		};
-		AE324C4D27FDE4AD009AF642 /* Preview Content */ = {
+		AE3D91E52807F5310045721C /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				AE324C4E27FDE4AD009AF642 /* Preview Assets.xcassets */,
+				AE3D91E62807F5310045721C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		AE4CFAB628053488001292F4 /* splash */ = {
+		AE3D91ED2807F5370045721C /* views */ = {
 			isa = PBXGroup;
 			children = (
-				AE4CFAB7280534A0001292F4 /* Splash.swift */,
+				AE3D91F02807F59B0045721C /* MainView.swift */,
+				AE3D91F22807F5A30045721C /* SignUpView.swift */,
+				AE3D91EE2807F55A0045721C /* LogInView.swift */,
 			);
-			path = splash;
+			path = views;
+			sourceTree = "<group>";
+		};
+		AE3D91F42807F5A80045721C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				AE3D91F52807F5EB0045721C /* Models.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AE324C4327FDE4AA009AF642 /* GongGalBBang */ = {
+		AE3D91DB2807F5310045721C /* GongGalBBang */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE324C5227FDE4AD009AF642 /* Build configuration list for PBXNativeTarget "GongGalBBang" */;
+			buildConfigurationList = AE3D91EA2807F5310045721C /* Build configuration list for PBXNativeTarget "GongGalBBang" */;
 			buildPhases = (
-				AE324C4027FDE4AA009AF642 /* Sources */,
-				AE324C4127FDE4AA009AF642 /* Frameworks */,
-				AE324C4227FDE4AA009AF642 /* Resources */,
+				AE3D91D82807F5310045721C /* Sources */,
+				AE3D91D92807F5310045721C /* Frameworks */,
+				AE3D91DA2807F5310045721C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -100,25 +114,25 @@
 			);
 			name = GongGalBBang;
 			productName = GongGalBBang;
-			productReference = AE324C4427FDE4AA009AF642 /* GongGalBBang.app */;
+			productReference = AE3D91DC2807F5310045721C /* GongGalBBang.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AE324C3C27FDE4AA009AF642 /* Project object */ = {
+		AE3D91D42807F5310045721C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					AE324C4327FDE4AA009AF642 = {
-						CreatedOnToolsVersion = 13.1;
+					AE3D91DB2807F5310045721C = {
+						CreatedOnToolsVersion = 13.3;
 					};
 				};
 			};
-			buildConfigurationList = AE324C3F27FDE4AA009AF642 /* Build configuration list for PBXProject "GongGalBBang" */;
+			buildConfigurationList = AE3D91D72807F5310045721C /* Build configuration list for PBXProject "GongGalBBang" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -126,51 +140,52 @@
 				en,
 				Base,
 			);
-			mainGroup = AE324C3B27FDE4AA009AF642;
-			productRefGroup = AE324C4527FDE4AA009AF642 /* Products */;
+			mainGroup = AE3D91D32807F5310045721C;
+			productRefGroup = AE3D91DD2807F5310045721C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AE324C4327FDE4AA009AF642 /* GongGalBBang */,
+				AE3D91DB2807F5310045721C /* GongGalBBang */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AE324C4227FDE4AA009AF642 /* Resources */ = {
+		AE3D91DA2807F5310045721C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE324C4F27FDE4AD009AF642 /* Preview Assets.xcassets in Resources */,
-				AE324C4C27FDE4AD009AF642 /* Assets.xcassets in Resources */,
+				AE3D91E72807F5310045721C /* Preview Assets.xcassets in Resources */,
+				AE3D91E42807F5310045721C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AE324C4027FDE4AA009AF642 /* Sources */ = {
+		AE3D91D82807F5310045721C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEFD89DA2807DDB000CFC148 /* SignUpView.swift in Sources */,
-				AE324C4A27FDE4AA009AF642 /* LogInView.swift in Sources */,
-				AE4CFAB8280534A0001292F4 /* Splash.swift in Sources */,
-				AE324C4827FDE4AA009AF642 /* GongGalBBangApp.swift in Sources */,
+				AE3D91EF2807F55A0045721C /* LogInView.swift in Sources */,
+				AE3D91F32807F5A30045721C /* SignUpView.swift in Sources */,
+				AE3D91F12807F59B0045721C /* MainView.swift in Sources */,
+				AE3D91F62807F5EB0045721C /* Models.swift in Sources */,
+				AE3D91E22807F5310045721C /* ContentView.swift in Sources */,
+				AE3D91E02807F5310045721C /* GongGalBBangApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		AE324C5027FDE4AD009AF642 /* Debug */ = {
+		AE3D91E82807F5310045721C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -214,7 +229,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -224,14 +239,13 @@
 			};
 			name = Debug;
 		};
-		AE324C5127FDE4AD009AF642 /* Release */ = {
+		AE3D91E92807F5310045721C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -269,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -279,7 +293,7 @@
 			};
 			name = Release;
 		};
-		AE324C5327FDE4AD009AF642 /* Debug */ = {
+		AE3D91EB2807F5310045721C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -308,7 +322,7 @@
 			};
 			name = Debug;
 		};
-		AE324C5427FDE4AD009AF642 /* Release */ = {
+		AE3D91EC2807F5310045721C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -340,25 +354,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AE324C3F27FDE4AA009AF642 /* Build configuration list for PBXProject "GongGalBBang" */ = {
+		AE3D91D72807F5310045721C /* Build configuration list for PBXProject "GongGalBBang" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE324C5027FDE4AD009AF642 /* Debug */,
-				AE324C5127FDE4AD009AF642 /* Release */,
+				AE3D91E82807F5310045721C /* Debug */,
+				AE3D91E92807F5310045721C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE324C5227FDE4AD009AF642 /* Build configuration list for PBXNativeTarget "GongGalBBang" */ = {
+		AE3D91EA2807F5310045721C /* Build configuration list for PBXNativeTarget "GongGalBBang" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE324C5327FDE4AD009AF642 /* Debug */,
-				AE324C5427FDE4AD009AF642 /* Release */,
+				AE3D91EB2807F5310045721C /* Debug */,
+				AE3D91EC2807F5310045721C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AE324C3C27FDE4AA009AF642 /* Project object */;
+	rootObject = AE3D91D42807F5310045721C /* Project object */;
 }

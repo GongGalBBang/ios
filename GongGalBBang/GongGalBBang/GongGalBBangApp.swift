@@ -2,7 +2,7 @@
 //  GongGalBBangApp.swift
 //  GongGalBBang
 //
-//  Created by 김택현 on 2022/04/07.
+//  Created by 김택현 on 2022/04/14.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct GongGalBBangApp: App {
     var body: some Scene {
         WindowGroup {
-            LogInView()
+            MainView()
         }
     }
 }
