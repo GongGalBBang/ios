@@ -12,107 +12,94 @@ struct SignUpView: View {
     @State var emailAddress = ""
     @State var password = ""
     @State var emailUpdate = false
+    @Environment(\.presentationMode) var presentationMode
+    @State var STATE: Int? = 0
     
     var body: some View {
-        HStack {
-            Spacer()
-            VStack{
-                // close & title & log in
-                HStack {
-                    Button(action: {
-                        print("Close tapped!")
-                    }) {
-                            Image(systemName: "xmark")
+        NavigationView {
+            HStack {
+                Spacer()
+                Spacer()
+                VStack {
+                    NavigationLink(destination: RoomListView().navigationBarHidden(true).environmentObject(ModelData()), tag: 1, selection: $STATE) {
+                        EmptyView()
+                    }
+                    
+                    // full name
+                    VStack(alignment: .leading) {
+                        Text("Full Name")
+                            .foregroundColor(.black)
+                        TextField("Enter your Full Name", text: $fullName)
+                            .textFieldStyle(.roundedBorder)
+                            .multilineTextAlignment(.leading)
+                            .foregroundColor(.black)
+                    }
+                    
+                    // email
+                    VStack(alignment: .leading) {
+                        Text("Email")
+                            .foregroundColor(.black)
+                        TextField("Enter your Email", text: $emailAddress)
+                            .textFieldStyle(.roundedBorder)
+                            .multilineTextAlignment(.leading)
+                            .foregroundColor(.black)
+                    }
+                    
+                    // password
+                    VStack(alignment: .leading) {
+                        Text("Password")
+                            .foregroundColor(.black)
+                        SecureField("Must be at least 6 characters", text: $password)
+                            .textFieldStyle(.roundedBorder)
+                            .multilineTextAlignment(.leading)
+                            .foregroundColor(.black)
+                    }
+                    
+                    // checkbox
+                    Toggle("Sign Up for email updates.", isOn: $emailUpdate)
                         .foregroundColor(.black)
-                        .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
-                    }
+                        .font(.system(size: 15))
+                        .toggleStyle(CheckboxStyle())
+                        .padding()
                     
-                    Spacer()
-                    
-                    Text("Sign Up")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 0))
-                    
-                    Spacer()
-                    
+                    // sign up button
                     Button(action: {
-                        print("log in tapped")
-                    }) {
-                        Text("LOG IN")
-                            .fontWeight(.bold)
-                            .font(.system(size: 15))
+                        STATE = 1
+                    }){
+                        Text("SIGN UP")
+                            .foregroundColor(.white)
+                            .fontWeight(.semibold)
+                            .font(.system(size: 17))
                     }
-                    .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                        .buttonStyle(SignUpStyle())
+                    
+                    Text("By continuing, you agree to accept\n our Privacy Policy & Terms of Service")
+                        .foregroundColor(.black)
+                        .font(.system(size: 13))
+                        .fontWeight(.light)
+                        .multilineTextAlignment(.center)
+                    Spacer()
                 }
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
-                
-                // full name
-                VStack(alignment: .leading) {
-                    Text("Full Name")
-                    TextField("Enter your Full Name", text: $fullName)
-                        .textFieldStyle(.roundedBorder)
-                }
-                
-                // email
-                VStack(alignment: .leading) {
-                    Text("Email")
-                    TextField("Enter your Email", text: $emailAddress)
-                        .textFieldStyle(.roundedBorder)
-                }
-                
-                // password
-                VStack(alignment: .leading) {
-                    Text("Password")
-                    SecureField("Must be at least 6 characters", text: $password)
-                        .textFieldStyle(.roundedBorder)
-                }
-                
-                // checkbox
-                Toggle("Sign Up for email updates.", isOn: $emailUpdate)
-                    .font(.system(size: 15))
-                    .toggleStyle(CheckboxStyle())
-                    .padding()
-                
-                // sign up button
-                Button(action: {
-                    print("sign up tapped!")
-                }) {
-                    Text("SIGN UP")
-                        .foregroundColor(.white)
-                        .fontWeight(.semibold)
-                        .font(.system(size: 17))
-                }
-                    .buttonStyle(SignUpStyle())
-                
-                Text("By continuing, you agree to accept\n our Privacy Policy & Terms of Service")
-                    .font(.system(size: 13))
-                    .fontWeight(.light)
-                    .multilineTextAlignment(.center)
-                
                 Spacer()
                 Spacer()
             }
-            Spacer()
+                
+            .padding(EdgeInsets(top: 40, leading: 0, bottom: 0, trailing: 0))
+            .navigationTitle("SIGN UP")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    },label: {Image(systemName: "xmark")
+                        .foregroundColor(.black)
+                    })
+                }
+            })
         }
     }
 }
 
-struct CheckboxStyle: ToggleStyle {
-
-    func makeBody(configuration: Self.Configuration) -> some View {
-
-        return HStack {
-            Image(systemName: configuration.isOn ? "checkmark.square" : "square")
-                .resizable()
-                .frame(width: 24, height: 24)
-                .foregroundColor(configuration.isOn ? .blue : .gray)
-                configuration.label
-        }
-        .onTapGesture { configuration.isOn.toggle() }
-
-    }
-}
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {

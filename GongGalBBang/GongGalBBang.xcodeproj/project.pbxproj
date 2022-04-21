@@ -8,26 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		AE3D91E02807F5310045721C /* GongGalBBangApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */; };
-		AE3D91E22807F5310045721C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91E12807F5310045721C /* ContentView.swift */; };
 		AE3D91E42807F5310045721C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3D91E32807F5310045721C /* Assets.xcassets */; };
 		AE3D91E72807F5310045721C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3D91E62807F5310045721C /* Preview Assets.xcassets */; };
 		AE3D91EF2807F55A0045721C /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91EE2807F55A0045721C /* LogInView.swift */; };
-		AE3D91F12807F59B0045721C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91F02807F59B0045721C /* MainView.swift */; };
+		AE3D91F12807F59B0045721C /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91F02807F59B0045721C /* RoomListView.swift */; };
 		AE3D91F32807F5A30045721C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91F22807F5A30045721C /* SignUpView.swift */; };
-		AE3D91F62807F5EB0045721C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91F52807F5EB0045721C /* Models.swift */; };
+		AE3D91F62807F5EB0045721C /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91F52807F5EB0045721C /* ButtonStyles.swift */; };
+		AE3D91F928080C420045721C /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91F828080C420045721C /* MyPageView.swift */; };
+		AE3D91FE28080D050045721C /* PlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91FB28080D050045721C /* PlaceDetail.swift */; };
+		AE3D91FF28080D050045721C /* PlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91FC28080D050045721C /* PlaceRow.swift */; };
+		AE3D920228080D730045721C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D920128080D730045721C /* ModelData.swift */; };
+		AE3D920428080D910045721C /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D920328080D910045721C /* Place.swift */; };
+		AE3D920728080E0E0045721C /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = AE3D920628080E0E0045721C /* landmarkData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AE3D91DC2807F5310045721C /* GongGalBBang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GongGalBBang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GongGalBBangApp.swift; sourceTree = "<group>"; };
-		AE3D91E12807F5310045721C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AE3D91E32807F5310045721C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE3D91E62807F5310045721C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AE3D91EE2807F55A0045721C /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
-		AE3D91F02807F59B0045721C /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AE3D91F02807F59B0045721C /* RoomListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 		AE3D91F22807F5A30045721C /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		AE3D91F52807F5EB0045721C /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		AE3D91F52807F5EB0045721C /* ButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		AE3D91F72807F63F0045721C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AE3D91F828080C420045721C /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		AE3D91FB28080D050045721C /* PlaceDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetail.swift; sourceTree = "<group>"; };
+		AE3D91FC28080D050045721C /* PlaceRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceRow.swift; sourceTree = "<group>"; };
+		AE3D920128080D730045721C /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		AE3D920328080D910045721C /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		AE3D920628080E0E0045721C /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +70,14 @@
 		AE3D91DE2807F5310045721C /* GongGalBBang */ = {
 			isa = PBXGroup;
 			children = (
-				AE3D91F72807F63F0045721C /* Info.plist */,
 				AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */,
 				AE3D91ED2807F5370045721C /* views */,
+				AE3D91FA28080CDA0045721C /* places */,
+				AE3D920928101B830045721C /* helpers */,
 				AE3D91F42807F5A80045721C /* models */,
-				AE3D91E12807F5310045721C /* ContentView.swift */,
+				AE3D920528080DE20045721C /* resources */,
 				AE3D91E32807F5310045721C /* Assets.xcassets */,
+				AE3D91F72807F63F0045721C /* Info.plist */,
 				AE3D91E52807F5310045721C /* Preview Content */,
 			);
 			path = GongGalBBang;
@@ -82,9 +94,10 @@
 		AE3D91ED2807F5370045721C /* views */ = {
 			isa = PBXGroup;
 			children = (
-				AE3D91F02807F59B0045721C /* MainView.swift */,
+				AE3D91F02807F59B0045721C /* RoomListView.swift */,
 				AE3D91F22807F5A30045721C /* SignUpView.swift */,
 				AE3D91EE2807F55A0045721C /* LogInView.swift */,
+				AE3D91F828080C420045721C /* MyPageView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -92,9 +105,35 @@
 		AE3D91F42807F5A80045721C /* models */ = {
 			isa = PBXGroup;
 			children = (
-				AE3D91F52807F5EB0045721C /* Models.swift */,
+				AE3D920328080D910045721C /* Place.swift */,
+				AE3D920128080D730045721C /* ModelData.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		AE3D91FA28080CDA0045721C /* places */ = {
+			isa = PBXGroup;
+			children = (
+				AE3D91FB28080D050045721C /* PlaceDetail.swift */,
+				AE3D91FC28080D050045721C /* PlaceRow.swift */,
+			);
+			path = places;
+			sourceTree = "<group>";
+		};
+		AE3D920528080DE20045721C /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE3D920628080E0E0045721C /* landmarkData.json */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		AE3D920928101B830045721C /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AE3D91F52807F5EB0045721C /* ButtonStyles.swift */,
+			);
+			path = helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +196,7 @@
 			files = (
 				AE3D91E72807F5310045721C /* Preview Assets.xcassets in Resources */,
 				AE3D91E42807F5310045721C /* Assets.xcassets in Resources */,
+				AE3D920728080E0E0045721C /* landmarkData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,11 +208,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE3D91EF2807F55A0045721C /* LogInView.swift in Sources */,
+				AE3D920428080D910045721C /* Place.swift in Sources */,
 				AE3D91F32807F5A30045721C /* SignUpView.swift in Sources */,
-				AE3D91F12807F59B0045721C /* MainView.swift in Sources */,
-				AE3D91F62807F5EB0045721C /* Models.swift in Sources */,
-				AE3D91E22807F5310045721C /* ContentView.swift in Sources */,
+				AE3D91F12807F59B0045721C /* RoomListView.swift in Sources */,
+				AE3D91F62807F5EB0045721C /* ButtonStyles.swift in Sources */,
 				AE3D91E02807F5310045721C /* GongGalBBangApp.swift in Sources */,
+				AE3D91F928080C420045721C /* MyPageView.swift in Sources */,
+				AE3D91FF28080D050045721C /* PlaceRow.swift in Sources */,
+				AE3D91FE28080D050045721C /* PlaceDetail.swift in Sources */,
+				AE3D920228080D730045721C /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +349,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GongGalBBang/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -334,7 +377,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GongGalBBang/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

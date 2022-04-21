@@ -10,47 +10,59 @@ import SwiftUI
 struct LogInView: View {
     @State var emailAddress = ""
     @State var password = ""
+    @State var STATE: Int? = 0
     var body: some View {
-        HStack {
-            Spacer()
-            VStack{
-                Text("Log In")
-                    .font(.title)
-                    .padding(EdgeInsets(top: 70, leading: 0, bottom: 50, trailing: 0))
-                
-                VStack(alignment: .leading) {
-                    Text("Email address")
-                    TextField("Enter your Email address", text: $emailAddress)
-                        .textFieldStyle(.roundedBorder)
+        NavigationView{
+            HStack {
+                Spacer()
+                Spacer()
+                VStack{
+                    NavigationLink(destination: RoomListView().environmentObject(ModelData()) .navigationBarHidden(true), tag: 1, selection: $STATE) {
+                        EmptyView()
+                    }
+                    NavigationLink(destination: SignUpView()
+                        .navigationBarHidden(true),  tag: 2, selection: $STATE) {
+                        EmptyView()
+                    }
+                    
+                    Image("GongGalBBang")
+                        .resizable()
+                        .edgesIgnoringSafeArea(.all)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 200)
+                        .padding()
+                    
+                    VStack(alignment: .leading) {
+                        Text("Email address")
+                        TextField("Enter your Email address", text: $emailAddress)
+                            .textFieldStyle(.roundedBorder)
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        Text("Password")
+                        SecureField("Enter your Password", text: $password)
+                            .textFieldStyle(.roundedBorder)
+                    }
+                    Button(action: {STATE = 1}) {
+                        Text("Log In")
+                            .foregroundColor(.black)
+                            .fontWeight(.semibold)
+                            .font(.title3)
+                    }
+                        .buttonStyle(LoginStyle())
+                        .padding()
+                    
+                    Button(action: {STATE = 2}) {
+                        Text("Don't have account? Sign Up")
+                            .fontWeight(.light)
+                    }
+                    Spacer()
                 }
-                .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 50))
-                
-                VStack(alignment: .leading) {
-                    Text("Password")
-                    SecureField("Enter your Password", text: $password)
-                        .textFieldStyle(.roundedBorder)
-                }
-                .padding(EdgeInsets(top: 0, leading: 50, bottom: 80, trailing: 50))
-                Button(action: {
-                    print("login tapped!")
-                }) {
-                    Text("Log In")
-                        .foregroundColor(.black)
-                        .fontWeight(.semibold)
-                        .font(.title3)
-                }
-                    .buttonStyle(LoginStyle())
-                    .padding()
-                
-                Button(action: {
-                    print("sign up tapped!")
-                }) {
-                    Text("Don't have account? Sign Up")
-                        .fontWeight(.light)
-                }
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 70, trailing: 0))
-            }.border(.black, width: 2)
-            Spacer()
+                Spacer()
+                Spacer()
+            }
+            .navigationTitle("LOG IN")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
