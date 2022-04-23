@@ -11,8 +11,8 @@ struct MyPageView: View {
     var body: some View {
         NavigationView {
             Text("ss")
+                .navigationBarHidden(true)
         }
-        .navigationBarHidden(true)
     }
 }
 

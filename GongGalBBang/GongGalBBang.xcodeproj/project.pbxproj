@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE206BC4281442FD00A609BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE206BC3281442FD00A609BB /* MainView.swift */; };
 		AE3D91E02807F5310045721C /* GongGalBBangApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */; };
 		AE3D91E42807F5310045721C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3D91E32807F5310045721C /* Assets.xcassets */; };
 		AE3D91E72807F5310045721C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3D91E62807F5310045721C /* Preview Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE206BC3281442FD00A609BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AE3D91DC2807F5310045721C /* GongGalBBang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GongGalBBang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GongGalBBangApp.swift; sourceTree = "<group>"; };
 		AE3D91E32807F5310045721C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				AE3D91F22807F5A30045721C /* SignUpView.swift */,
 				AE3D91EE2807F55A0045721C /* LogInView.swift */,
 				AE3D91F828080C420045721C /* MyPageView.swift */,
+				AE206BC3281442FD00A609BB /* MainView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				AE3D91F62807F5EB0045721C /* ButtonStyles.swift in Sources */,
 				AE3D91E02807F5310045721C /* GongGalBBangApp.swift in Sources */,
 				AE3D91F928080C420045721C /* MyPageView.swift in Sources */,
+				AE206BC4281442FD00A609BB /* MainView.swift in Sources */,
 				AE3D91FF28080D050045721C /* PlaceRow.swift in Sources */,
 				AE3D91FE28080D050045721C /* PlaceDetail.swift in Sources */,
 				AE3D920228080D730045721C /* ModelData.swift in Sources */,

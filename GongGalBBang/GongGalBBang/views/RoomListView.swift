@@ -10,12 +10,15 @@ import SwiftUI
 struct RoomListView: View {
     @EnvironmentObject var modelData: ModelData
     @State private var showFavoritesOnly = false
-    @Environment(\.presentationMode) var presentationMode
     
     var filteredLandmarks: [Place] {
         modelData.places.filter { place in
             (!showFavoritesOnly || place.isFavorite)
         }
+    }
+    
+    init() {
+        UITableView.appearance().backgroundColor = .white
     }
     
     var body: some View {
@@ -33,18 +36,9 @@ struct RoomListView: View {
                         }
                     }
                 }
+                .navigationTitle("ROOM LIST")
+                .navigationBarTitleDisplayMode(.inline)
             }
-            .navigationTitle("ROOM LIST")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar(content: {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        presentationMode.wrappedValue.dismiss()
-                    },label: {Image(systemName: "xmark")
-                        .foregroundColor(.black)
-                    })
-                }
-            })
         }
     }
 }

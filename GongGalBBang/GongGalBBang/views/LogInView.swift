@@ -17,7 +17,7 @@ struct LogInView: View {
                 Spacer()
                 Spacer()
                 VStack{
-                    NavigationLink(destination: RoomListView().environmentObject(ModelData()) .navigationBarHidden(true), tag: 1, selection: $STATE) {
+                    NavigationLink(destination: MainView() .navigationBarHidden(true), tag: 1, selection: $STATE) {
                         EmptyView()
                     }
                     NavigationLink(destination: SignUpView()
