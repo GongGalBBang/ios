@@ -17,38 +17,30 @@ struct PlaceDetail: View {
     }
     
     var body: some View {
-        HStack {
-            Spacer()
-            NavigationView {
-                VStack(alignment: .leading) {
-                    HStack {
-                        Button(action: {
-                            presentationMode.wrappedValue.dismiss()
-                        }){
-                            Image(systemName: "arrowshape.turn.up.backward.fill")
-                                .foregroundColor(.black)
-                                .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 25))
-                        }
-                        Spacer()
-                        // title
-                        Text("Room Name")
-                            .foregroundColor(.black)
-                            .font(.title)
-                            .fontWeight(.bold)
-                        Spacer()
-                        Spacer()
-                    }
-                    Divider()
-                    
-                    Text("시간대 별 인원 추이")
-                        .fontWeight(.bold)
-                    
-                    Spacer()
-                }
-                .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 0))
-                .navigationBarHidden(true)
+        NavigationView {
+            VStack{
+                Divider()
+                Image("GongGalBBang").resizable().frame(width: 200, height: 200)
+                Text("예상 혼잡도: \(place.state)")
+                Text("분석 혼잡도: \(place.state)")
+                Divider()
+                Text("시간대 별 인원 추이")
+                    .fontWeight(.bold)
+                    .frame(alignment: .leading)
+                Spacer()
             }
-            Spacer()
+            .padding(EdgeInsets(top: 40, leading: 0, bottom: 0, trailing: 0))
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("ROOM NAME")
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    },label: {Image(systemName: "xmark")
+                        .foregroundColor(.black)
+                    })
+                }
+            })
         }
 //        ScrollView{
 //            MapView(coordinate: place.locationCoordinate)

@@ -56,7 +56,7 @@ struct SignUpView: View {
                     }
                     
                     // checkbox
-                    Toggle("Sign Up for email updates.", isOn: $emailUpdate)
+                    Toggle("개인정보 수집에 동의합니다.", isOn: $emailUpdate)
                         .foregroundColor(.black)
                         .font(.system(size: 15))
                         .toggleStyle(CheckboxStyle())

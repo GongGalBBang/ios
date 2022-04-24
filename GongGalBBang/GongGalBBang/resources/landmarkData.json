@@ -1,9 +1,9 @@
 [
     {
-        "name": "Turtle Rock",
+        "name": "학관 - 줄울림",
         "category": "Rivers",
         "city": "Twentynine Palms",
-        "state": "California",
+        "state": "혼잡",
         "id": 1001,
         "isFeatured": true,
         "isFavorite": true,
@@ -16,10 +16,10 @@
         "imageName": "turtlerock"
     },
     {
-        "name": "Lake Umbagog",
+        "name": "과방 - 소프트웨어",
         "category": "Lakes",
         "city": "Errol",
-        "state": "New Hampshire",
+        "state": "여유",
         "id": 1012,
         "isFeatured": false,
         "isFavorite": false,

@@ -15,7 +15,11 @@ struct PlaceRow: View {
             place.image
                 .resizable()
                 .frame(width: 50, height: 50)
-            Text(place.name)
+            VStack(alignment: .leading){
+                Text(place.name)
+                Text(place.state)
+                    .fontWeight(.light)
+            }
             
             Spacer()
             

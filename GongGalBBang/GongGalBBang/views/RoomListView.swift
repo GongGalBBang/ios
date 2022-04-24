@@ -24,13 +24,14 @@ struct RoomListView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Divider()
                 List{
                     Toggle(isOn: $showFavoritesOnly) {
                         Text("Favorites only")
                     }
                     ForEach(filteredLandmarks, id: \.id) { place in
                         NavigationLink {
-                            PlaceDetail(place: place)
+                            PlaceDetail(place: place).navigationBarHidden(true)
                         } label: {
                             PlaceRow(place: place)
                         }
