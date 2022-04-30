@@ -10,11 +10,14 @@ import SwiftUI
 struct MyPageView: View {
     var body: some View {
         NavigationView {
+            let client = OUTPUTDBtoAPIGatewayAPIClient.defaultClient()
+            
             Text("ss")
                 .navigationBarHidden(true)
         }
     }
 }
+
 
 struct MyPageView_Previews: PreviewProvider {
     static var previews: some View {
