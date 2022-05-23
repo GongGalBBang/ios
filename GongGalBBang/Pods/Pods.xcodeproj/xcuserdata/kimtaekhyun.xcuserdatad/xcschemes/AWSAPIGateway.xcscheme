@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09EAFF6B652BAEFAB1760E0750BEF03C"
-               BuildableName = "Pods_ui.framework"
-               BlueprintName = "Pods-ui"
+               BlueprintIdentifier = "CE166EEDD6C8C61B4D900F7A370ECB79"
+               BuildableName = "AWSAPIGateway.framework"
+               BlueprintName = "AWSAPIGateway"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

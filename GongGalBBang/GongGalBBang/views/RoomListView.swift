@@ -37,6 +37,7 @@ struct RoomListView: View {
                         }
                     }
                 }
+                .edgesIgnoringSafeArea(.all)
                 .navigationTitle("ROOM LIST")
                 .navigationBarTitleDisplayMode(.inline)
             }

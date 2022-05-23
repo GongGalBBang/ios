@@ -2,19 +2,24 @@ PODS:
   - AWSAPIGateway (2.4.16):
     - AWSCore (= 2.4.16)
   - AWSCore (2.4.16)
+  - ExytePopupView (1.1.0)
 
 DEPENDENCIES:
   - AWSAPIGateway (~> 2.4.7)
+  - ExytePopupView
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AWSAPIGateway
     - AWSCore
+  trunk:
+    - ExytePopupView
 
 SPEC CHECKSUMS:
   AWSAPIGateway: 49d48577724a9f53eda1e8c53411c1f1ebac3b7b
   AWSCore: 7c3c129991e6387bcbad7132bc3661e7135754db
+  ExytePopupView: bc5c3d9154a6fd8c07c6fb6e9d29d6245e327fc6
 
-PODFILE CHECKSUM: 8875deba8d5984df3e75f622699a9907b7b2082a
+PODFILE CHECKSUM: ff9997f4e706410b4cb653d9e7d592db88278734
 
 COCOAPODS: 1.11.3

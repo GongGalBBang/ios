@@ -1,8 +1,9 @@
-source 'https://github.com/CocoaPods/Specs.git'
-
-platform :ios, '8.0'
-use_frameworks!
+# source 'https://github.com/CocoaPods/Specs.git'
+# platform :ios, '8.0'
 
 target 'GongGalBBang' do
-	pod 'AWSAPIGateway', '~> 2.4.7'
+  use_frameworks!
+
+  pod 'AWSAPIGateway', '~> 2.4.7'
+  pod 'ExytePopupView'
 end
