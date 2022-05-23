@@ -1,0 +1,22 @@
+[
+    {
+        "name": "학관 - 줄울림",
+        "category": "Rivers",
+        "city": "Twentynine Palms",
+        "state": "혼잡",
+        "id": 1001,
+        "isFeatured": true,
+        "isFavorite": true,
+        "imageName": "GongGalBBang"
+    },
+    {
+        "name": "과방 - 소프트웨어",
+        "category": "Lakes",
+        "city": "Errol",
+        "state": "여유",
+        "id": 1012,
+        "isFeatured": false,
+        "isFavorite": false,
+        "imageName": "GongGalBBang"
+    }
+]
