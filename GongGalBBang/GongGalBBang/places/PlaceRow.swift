@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AWSAPIGateway
 
 struct PlaceRow: View {
     var place: Place

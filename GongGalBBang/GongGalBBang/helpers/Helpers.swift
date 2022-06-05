@@ -13,7 +13,7 @@ func isValidEmail(testStr:String) -> Bool {
       return emailTest.evaluate(with: testStr)
 }
 func isValidName(testStr:String) -> Bool {
-    let nameRegEx = "^[A-Za-z]{3,}$"
+    let nameRegEx = "^[가-힣]{2,4}$"
     let nameTest = NSPredicate(format:"SELF MATCHES %@", nameRegEx)
     return nameTest.evaluate(with: testStr)
 }
@@ -26,8 +26,9 @@ func isValidPassword(testStr:String) -> Bool {
 func createBottomToastMessage(title : String, message : String) -> some View {
     HStack(alignment: .top,spacing: 10){
         VStack(alignment: .leading){
+            let _ = print(title)
             Text(title)
-                .fontWeight(.black)
+                .fontWeight(.regular)
                 .foregroundColor(Color.white)
             
             Text(message)

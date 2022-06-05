@@ -49,19 +49,19 @@ struct LogInView: View {
                         }
                         Button(action: {
                             if(emailAddress == "" || password == "") {
-                                showingToast = true
-                                showingToastTitle = "오류"
-                                showingToastMessage = "모든 정보를 입력해주세요"
+                                self.showingToast = true
+                                self.showingToastTitle = "오류"
+                                self.showingToastMessage = "모든 정보를 입력해주세요"
                             }
                             else if(!isValidEmail(testStr: emailAddress)) {
-                                showingToast = true
-                                showingToastTitle = "이메일 오류"
-                                showingToastMessage = "올바른 이메일 형식을 입력해주세요"
+                                self.showingToast = true
+                                self.showingToastTitle = "이메일 오류"
+                                self.showingToastMessage = "올바른 이메일 형식을 입력해주세요"
                             }
                             else if(!isValidPassword(testStr: password)){
-                                showingToast = true
-                                showingToastTitle = "비밀번호 오류"
-                                showingToastMessage = "올바른 비밀번호 형식을 입력해주세요"
+                                self.showingToast = true
+                                self.showingToastTitle = "비밀번호 오류"
+                                self.showingToastMessage = "올바른 비밀번호 형식을 입력해주세요"
                             }
                             else {
                                 STATE = 1
@@ -85,9 +85,9 @@ struct LogInView: View {
                 }
             }
             .popup(isPresented: $showingToast, type: .floater(verticalPadding: 20), position: .bottom, animation: .spring(), autohideIn: 2, closeOnTap: true, closeOnTapOutside: true, view: {
-                createBottomToastMessage(title: showingToastTitle, message: showingToastMessage)
+                createBottomToastMessage(title: self.showingToastTitle, message: self.showingToastMessage)
             })
-            .navigationTitle("LOG IN")
+            .navigationTitle("Log In")
             .navigationBarTitleDisplayMode(.inline)
         }
     }

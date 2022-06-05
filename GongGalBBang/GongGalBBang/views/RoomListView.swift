@@ -11,6 +11,8 @@ struct RoomListView: View {
     @EnvironmentObject var modelData: ModelData
     @State private var showFavoritesOnly = false
     
+    let client = OUTPUTDBtoAPIGatewayAPIClient.default()
+    
     var filteredLandmarks: [Place] {
         modelData.places.filter { place in
             (!showFavoritesOnly || place.isFavorite)
@@ -77,4 +79,8 @@ struct RoomListViewView_Previews:
         static var previews: some View {
                 RoomListView().environmentObject(ModelData())
         }
+}
+
+func loadData() {
+    
 }
