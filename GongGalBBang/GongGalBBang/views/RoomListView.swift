@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct RoomListView: View {
-    @EnvironmentObject var modelData: ModelData
     @State private var showFavoritesOnly = false
     
-    let client = OUTPUTDBtoAPIGatewayAPIClient.default()
+    @StateObject private var getRoomL = GetRoom()
     
-    var filteredLandmarks: [Place] {
-        modelData.places.filter { place in
-            (!showFavoritesOnly || place.isFavorite)
-        }
-    }
+//    var filteredLandmarks: [Place] {
+//        modelData.places.filter { place in
+//            (!showFavoritesOnly || place.isFavorite)
+//        }
+//    }
     
     init() {
         UITableView.appearance().backgroundColor = .white
@@ -31,18 +30,29 @@ struct RoomListView: View {
                     Toggle(isOn: $showFavoritesOnly) {
                         Text("Favorites only")
                     }
-                    ForEach(filteredLandmarks, id: \.id) { place in
+                    ForEach(getRoomL.res, id: \.self) { room in
                         NavigationLink {
-                            PlaceDetail(place: place).navigationBarHidden(true)
+                            PlaceDetail(room: room).navigationBarHidden(true)
                         } label: {
-                            PlaceRow(place: place)
+                            PlaceRow(room: room)
                         }
                     }
+//                    ForEach(filteredLandmarks, id: \.id) { place in
+//                        NavigationLink {
+//                            PlaceDetail(place: place).navigationBarHidden(true)
+//                        } label: {
+//                            PlaceRow(place: place)
+//                        }
+//                    }
                 }
                 .edgesIgnoringSafeArea(.all)
                 .navigationTitle("ROOM LIST")
                 .navigationBarTitleDisplayMode(.inline)
             }
+        }
+        .onAppear {
+            let req = RoomRequest(access_time: "2022-06-03_03:27:32", club_number: "2,3", major_number: "1,2")
+            getRoomL.getRooms(roomReq: req)
         }
     }
 }
@@ -74,13 +84,10 @@ struct RoomListView: View {
 //            .padding()
 //        }
 
+
 struct RoomListViewView_Previews:
     PreviewProvider {
         static var previews: some View {
-                RoomListView().environmentObject(ModelData())
+            RoomListView().environmentObject(GetRoom())
         }
-}
-
-func loadData() {
-    
 }

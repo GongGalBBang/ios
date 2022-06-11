@@ -1,13 +1,13 @@
 //
-//  Query.swift
+//  RoomRequest.swift
 //  GongGalBBang
 //
-//  Created by 김택현 on 2022/05/27.
+//  Created by 김택현 on 2022/06/04.
 //
 
 import SwiftUI
 
-struct Query{
+struct RoomRequest: Hashable, Codable {
     var access_time : String
     var club_number : String
     var major_number : String

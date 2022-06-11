@@ -14,6 +14,9 @@ struct LogInView: View {
     @State var showingToast = false
     @State var showingToastTitle = ""
     @State var showingToastMessage = ""
+    
+    @StateObject private var postLogin = PostLogin()
+    
     var body: some View {
         NavigationView{
             ZStack {
@@ -49,22 +52,33 @@ struct LogInView: View {
                         }
                         Button(action: {
                             if(emailAddress == "" || password == "") {
-                                self.showingToast = true
-                                self.showingToastTitle = "오류"
-                                self.showingToastMessage = "모든 정보를 입력해주세요"
+                                showingToast = true
+                                showingToastTitle = "오류"
+                                showingToastMessage = "모든 정보를 입력해주세요"
                             }
                             else if(!isValidEmail(testStr: emailAddress)) {
-                                self.showingToast = true
-                                self.showingToastTitle = "이메일 오류"
-                                self.showingToastMessage = "올바른 이메일 형식을 입력해주세요"
+                                showingToast = true
+                                showingToastTitle = "이메일 오류"
+                                showingToastMessage = "올바른 이메일 형식을 입력해주세요"
                             }
                             else if(!isValidPassword(testStr: password)){
-                                self.showingToast = true
-                                self.showingToastTitle = "비밀번호 오류"
-                                self.showingToastMessage = "올바른 비밀번호 형식을 입력해주세요"
+                                showingToast = true
+                                showingToastTitle = "비밀번호 오류"
+                                showingToastMessage = "올바른 비밀번호 형식을 입력해주세요"
                             }
                             else {
-                                STATE = 1
+                                let req = LoginRequest(user_id : emailAddress, user_pw : password)
+                                postLogin.postUser(loginReq: req)
+                                print("HERE")
+                                print(postLogin.res)
+                                if(postLogin.res.statusCode == 200) {
+                                    STATE = 1
+                                }
+                                else {
+                                    showingToast = true
+                                    showingToastTitle = "로그인 실패"
+                                    showingToastMessage = "다시 입력해주세요"
+                                }
                             } }) {
                             Text("Log In")
                                 .foregroundColor(.black)
@@ -85,9 +99,9 @@ struct LogInView: View {
                 }
             }
             .popup(isPresented: $showingToast, type: .floater(verticalPadding: 20), position: .bottom, animation: .spring(), autohideIn: 2, closeOnTap: true, closeOnTapOutside: true, view: {
-                createBottomToastMessage(title: self.showingToastTitle, message: self.showingToastMessage)
+                createBottomToastMessage(title: showingToastTitle, message: showingToastMessage)
             })
-            .navigationTitle("Log In")
+            .navigationTitle("LOG IN")
             .navigationBarTitleDisplayMode(.inline)
         }
     }

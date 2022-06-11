@@ -6,38 +6,35 @@
 //
 
 import SwiftUI
-import AWSAPIGateway
 
 struct PlaceRow: View {
-    var place: Place
+    var room: RoomResult
     
     var body: some View {
         HStack {
-            place.image
-                .resizable()
-                .frame(width: 50, height: 50)
+//            place.image
+//                .resizable()
+//                .frame(width: 50, height: 50)
             VStack(alignment: .leading){
-                Text(place.name)
-                Text(place.state)
-                    .fontWeight(.light)
+                Text("\(room.className)호")
             }
             
             Spacer()
             
-            if place.isFavorite {
-                Image(systemName: "star.fill")
-                    .foregroundColor(.yellow)
-            }
+//            if place.isFavorite {
+//                Image(systemName: "star.fill")
+//                    .foregroundColor(.yellow)
+//            }
         }
     }
 }
 
-struct LandmarkRow_Previews: PreviewProvider {
-    static var places = ModelData().places
+struct PlaceRow_Previews: PreviewProvider {
+    static var room = GetRoom().res
     static var previews: some View {
         Group {
-            PlaceRow(place: places[0])
-            PlaceRow(place: places[1])
+            PlaceRow(room: room[0])
+            PlaceRow(room: room[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

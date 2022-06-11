@@ -24,8 +24,12 @@
 		AE3D920428080D910045721C /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D920328080D910045721C /* Place.swift */; };
 		AE3D920728080E0E0045721C /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = AE3D920628080E0E0045721C /* landmarkData.json */; };
 		AE411529283B672700F459F3 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE411528283B672700F459F3 /* Helpers.swift */; };
-		AE41152D2840B31A00F459F3 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41152C2840B31A00F459F3 /* Query.swift */; };
-		AE41152F2840C1E000F459F3 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41152E2840C1E000F459F3 /* Response.swift */; };
+		AE411548284B281700F459F3 /* GetRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE411547284B281700F459F3 /* GetRoom.swift */; };
+		AE41154E284B375600F459F3 /* RoomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41154D284B375600F459F3 /* RoomRequest.swift */; };
+		AE411550284C7A2F00F459F3 /* RoomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41154F284C7A2F00F459F3 /* RoomResponse.swift */; };
+		AE4115522853398300F459F3 /* PostLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4115512853398300F459F3 /* PostLogin.swift */; };
+		AE411554285339E900F459F3 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE411553285339E900F459F3 /* LoginRequest.swift */; };
+		AE41155628533BF200F459F3 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41155528533BF200F459F3 /* LoginResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,8 +56,12 @@
 		AE3D920328080D910045721C /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		AE3D920628080E0E0045721C /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
 		AE411528283B672700F459F3 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
-		AE41152C2840B31A00F459F3 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
-		AE41152E2840C1E000F459F3 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		AE411547284B281700F459F3 /* GetRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoom.swift; sourceTree = "<group>"; };
+		AE41154D284B375600F459F3 /* RoomRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRequest.swift; sourceTree = "<group>"; };
+		AE41154F284C7A2F00F459F3 /* RoomResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomResponse.swift; sourceTree = "<group>"; };
+		AE4115512853398300F459F3 /* PostLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLogin.swift; sourceTree = "<group>"; };
+		AE411553285339E900F459F3 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		AE41155528533BF200F459F3 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +138,6 @@
 			children = (
 				AE3D920328080D910045721C /* Place.swift */,
 				AE3D920128080D730045721C /* ModelData.swift */,
-				AE41152C2840B31A00F459F3 /* Query.swift */,
-				AE41152E2840C1E000F459F3 /* Response.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -158,6 +164,12 @@
 			children = (
 				AE3D91F52807F5EB0045721C /* ButtonStyles.swift */,
 				AE411528283B672700F459F3 /* Helpers.swift */,
+				AE411547284B281700F459F3 /* GetRoom.swift */,
+				AE41154D284B375600F459F3 /* RoomRequest.swift */,
+				AE41154F284C7A2F00F459F3 /* RoomResponse.swift */,
+				AE4115512853398300F459F3 /* PostLogin.swift */,
+				AE411553285339E900F459F3 /* LoginRequest.swift */,
+				AE41155528533BF200F459F3 /* LoginResponse.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -197,8 +209,6 @@
 			dependencies = (
 			);
 			name = GongGalBBang;
-			packageProductDependencies = (
-			);
 			productName = GongGalBBang;
 			productReference = AE3D91DC2807F5310045721C /* GongGalBBang.app */;
 			productType = "com.apple.product-type.application";
@@ -227,8 +237,6 @@
 				Base,
 			);
 			mainGroup = AE3D91D32807F5310045721C;
-			packageReferences = (
-			);
 			productRefGroup = AE3D91DD2807F5310045721C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -299,20 +307,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE3D91EF2807F55A0045721C /* LogInView.swift in Sources */,
+				AE4115522853398300F459F3 /* PostLogin.swift in Sources */,
 				AE411529283B672700F459F3 /* Helpers.swift in Sources */,
+				AE41154E284B375600F459F3 /* RoomRequest.swift in Sources */,
 				AE3D920428080D910045721C /* Place.swift in Sources */,
 				AE3D91F32807F5A30045721C /* SignUpView.swift in Sources */,
-				AE41152F2840C1E000F459F3 /* Response.swift in Sources */,
+				AE41155628533BF200F459F3 /* LoginResponse.swift in Sources */,
 				AE3D91F12807F59B0045721C /* RoomListView.swift in Sources */,
 				AE3D91F62807F5EB0045721C /* ButtonStyles.swift in Sources */,
 				20DEB787281D1AD100B7C1D8 /* Empty.swift in Sources */,
+				AE411554285339E900F459F3 /* LoginRequest.swift in Sources */,
 				AE3D91E02807F5310045721C /* GongGalBBangApp.swift in Sources */,
-				AE41152D2840B31A00F459F3 /* Query.swift in Sources */,
 				AE206BC4281442FD00A609BB /* MainView.swift in Sources */,
 				AE3D91FF28080D050045721C /* PlaceRow.swift in Sources */,
 				AE3D91FE28080D050045721C /* PlaceDetail.swift in Sources */,
 				20DEB789281D1AFE00B7C1D8 /* OUTPUTDBtoAPIGatewayAPIClient.swift in Sources */,
+				AE411548284B281700F459F3 /* GetRoom.swift in Sources */,
 				AE3D920228080D730045721C /* ModelData.swift in Sources */,
+				AE411550284C7A2F00F459F3 /* RoomResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

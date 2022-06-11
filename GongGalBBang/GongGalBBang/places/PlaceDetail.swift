@@ -71,13 +71,15 @@ struct LineChartView: View {
     }
 }
 
+
+
 struct PlaceDetail: View {
-    @EnvironmentObject var modelData: ModelData
+    @EnvironmentObject var getRoom: GetRoom
     @Environment(\.presentationMode) var presentationMode
-    var place: Place
+    var room: RoomResult
     
-    var placeIndex: Int {
-        modelData.places.firstIndex(where: {$0.id == place.id})!
+    var roomIndex: Int {
+        getRoom.res.firstIndex(where: {$0.className == room.className})!
     }
     
     let scores = getHistoricalConfuse().map { Int($0.score) }
@@ -89,13 +91,13 @@ struct PlaceDetail: View {
                 VStack{
                     Image("GongGalBBang").resizable().frame(width: 200, height: 200)
                     HStack {
-                        Text(place.name)
+                        Text("\(room.className)호")
                             .font(.body)
-                        FavoriteButton(isSet: $modelData.places[placeIndex].isFavorite)
+//                        FavoriteButton(isSet: $getRoom.rooms[roomIndex].isFavorite)
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
-                    Text("예상 혼잡도: \(place.state)")
-                    Text("분석 혼잡도: \(place.state)")
+//                    Text("예상 혼잡도: \(place.state)")
+//                    Text("분석 혼잡도: \(place.state)")
                     Divider()
                         .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                     
@@ -113,7 +115,7 @@ struct PlaceDetail: View {
             }
             .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
             .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle(place.name)
+            .navigationTitle("\(room.className)호")
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
@@ -156,9 +158,9 @@ struct PlaceDetail: View {
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
-    static let modelData = ModelData()
+    static let getRoom = GetRoom()
     static var previews: some View {
-        PlaceDetail(place: ModelData().places[0])
-            .environmentObject(modelData)
+        PlaceDetail(room: GetRoom().res[0])
+            .environmentObject(getRoom)
     }
 }

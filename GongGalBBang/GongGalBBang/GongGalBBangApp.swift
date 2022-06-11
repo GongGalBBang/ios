@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct GongGalBBangApp: App {
+struct GongGalBBangApp: App {    
     var body: some Scene {
         WindowGroup {
             LogInView()

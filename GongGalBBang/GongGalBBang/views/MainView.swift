@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var STATE: Int? = 0
+//    var getRoom = GetRoom()
     
     var body: some View {
         NavigationView {
@@ -18,7 +19,8 @@ struct MainView: View {
                     EmptyView()
                 }
                 TabView {
-                    RoomListView().environmentObject(ModelData())
+                    RoomListView()
+//                        .environmentObject(getRoom)
                         .tabItem{
                             Image(systemName: "list.dash")
                             Text("휴게 시설")
