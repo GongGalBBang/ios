@@ -14,6 +14,7 @@ struct LogInView: View {
     @State var showingToast = false
     @State var showingToastTitle = ""
     @State var showingToastMessage = ""
+    @ObservedObject var res = LoginParameter()
     
     @StateObject private var postLogin = PostLogin()
     
@@ -24,10 +25,10 @@ struct LogInView: View {
                     Spacer()
                     Spacer()
                     VStack{
-                        NavigationLink(destination: MainView() .navigationBarHidden(true), tag: 1, selection: $STATE) {
+                        NavigationLink(destination: MainView(user: self.$res.res) .navigationBarHidden(true), tag: 1, selection: $STATE) {
                             EmptyView()
                         }
-                        NavigationLink(destination: SignUpView()
+                        NavigationLink(destination: SignUpView(clubSelectedItems: [], majorSelectedItems: [])
                             .navigationBarHidden(true),  tag: 2, selection: $STATE) {
                             EmptyView()
                         }
@@ -69,15 +70,16 @@ struct LogInView: View {
                             else {
                                 let req = LoginRequest(user_id : emailAddress, user_pw : password)
                                 postLogin.postUser(loginReq: req)
-                                print("HERE")
-                                print(postLogin.res)
-                                if(postLogin.res.statusCode == 200) {
+                                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                                    if(postLogin.res.statusCode == 200) {
+                                    res.res = postLogin.res
                                     STATE = 1
-                                }
-                                else {
-                                    showingToast = true
-                                    showingToastTitle = "로그인 실패"
-                                    showingToastMessage = "다시 입력해주세요"
+                                    }
+                                    else {
+                                        showingToast = true
+                                        showingToastTitle = "로그인 실패"
+                                        showingToastMessage = "다시 입력해주세요"
+                                    }
                                 }
                             } }) {
                             Text("Log In")

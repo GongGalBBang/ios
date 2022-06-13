@@ -10,6 +10,7 @@
 		20DEB787281D1AD100B7C1D8 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DEB786281D1AD100B7C1D8 /* Empty.swift */; };
 		20DEB789281D1AFE00B7C1D8 /* OUTPUTDBtoAPIGatewayAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DEB788281D1AFE00B7C1D8 /* OUTPUTDBtoAPIGatewayAPIClient.swift */; };
 		53B2C923D6DE503B977551EB /* Pods_GongGalBBang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993A51DC79EBD628F2750F3C /* Pods_GongGalBBang.framework */; };
+		AE008DBC285499D60024D927 /* PostRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE008DBB285499D60024D927 /* PostRegister.swift */; };
 		AE206BC4281442FD00A609BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE206BC3281442FD00A609BB /* MainView.swift */; };
 		AE3D91E02807F5310045721C /* GongGalBBangApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */; };
 		AE3D91E42807F5310045721C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3D91E32807F5310045721C /* Assets.xcassets */; };
@@ -22,7 +23,6 @@
 		AE3D91FF28080D050045721C /* PlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91FC28080D050045721C /* PlaceRow.swift */; };
 		AE3D920228080D730045721C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D920128080D730045721C /* ModelData.swift */; };
 		AE3D920428080D910045721C /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D920328080D910045721C /* Place.swift */; };
-		AE3D920728080E0E0045721C /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = AE3D920628080E0E0045721C /* landmarkData.json */; };
 		AE411529283B672700F459F3 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE411528283B672700F459F3 /* Helpers.swift */; };
 		AE411548284B281700F459F3 /* GetRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE411547284B281700F459F3 /* GetRoom.swift */; };
 		AE41154E284B375600F459F3 /* RoomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41154D284B375600F459F3 /* RoomRequest.swift */; };
@@ -30,6 +30,8 @@
 		AE4115522853398300F459F3 /* PostLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4115512853398300F459F3 /* PostLogin.swift */; };
 		AE411554285339E900F459F3 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE411553285339E900F459F3 /* LoginRequest.swift */; };
 		AE41155628533BF200F459F3 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41155528533BF200F459F3 /* LoginResponse.swift */; };
+		AEC5C4822856629900939A61 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5C4812856629900939A61 /* RegisterRequest.swift */; };
+		AEC5C484285662DD00939A61 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5C483285662DD00939A61 /* RegisterResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,7 @@
 		349A19384F0EEB7C8BDD7F43 /* Pods-GongGalBBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GongGalBBang.debug.xcconfig"; path = "Target Support Files/Pods-GongGalBBang/Pods-GongGalBBang.debug.xcconfig"; sourceTree = "<group>"; };
 		7B42C2D5D6A5E712C754AF0A /* Pods-GongGalBBang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GongGalBBang.release.xcconfig"; path = "Target Support Files/Pods-GongGalBBang/Pods-GongGalBBang.release.xcconfig"; sourceTree = "<group>"; };
 		993A51DC79EBD628F2750F3C /* Pods_GongGalBBang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GongGalBBang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE008DBB285499D60024D927 /* PostRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRegister.swift; sourceTree = "<group>"; };
 		AE206BC3281442FD00A609BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AE3D91DC2807F5310045721C /* GongGalBBang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GongGalBBang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GongGalBBangApp.swift; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		AE3D91FC28080D050045721C /* PlaceRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceRow.swift; sourceTree = "<group>"; };
 		AE3D920128080D730045721C /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		AE3D920328080D910045721C /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
-		AE3D920628080E0E0045721C /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
 		AE411528283B672700F459F3 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		AE411547284B281700F459F3 /* GetRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoom.swift; sourceTree = "<group>"; };
 		AE41154D284B375600F459F3 /* RoomRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRequest.swift; sourceTree = "<group>"; };
@@ -62,6 +64,8 @@
 		AE4115512853398300F459F3 /* PostLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLogin.swift; sourceTree = "<group>"; };
 		AE411553285339E900F459F3 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		AE41155528533BF200F459F3 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		AEC5C4812856629900939A61 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		AEC5C483285662DD00939A61 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +106,6 @@
 				AE3D91FA28080CDA0045721C /* places */,
 				AE3D920928101B830045721C /* helpers */,
 				AE3D91F42807F5A80045721C /* models */,
-				AE3D920528080DE20045721C /* resources */,
 				AE3D91E32807F5310045721C /* Assets.xcassets */,
 				AE3D91F72807F63F0045721C /* Info.plist */,
 				AE3D91E52807F5310045721C /* Preview Content */,
@@ -151,14 +154,6 @@
 			path = places;
 			sourceTree = "<group>";
 		};
-		AE3D920528080DE20045721C /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				AE3D920628080E0E0045721C /* landmarkData.json */,
-			);
-			path = resources;
-			sourceTree = "<group>";
-		};
 		AE3D920928101B830045721C /* helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +165,9 @@
 				AE4115512853398300F459F3 /* PostLogin.swift */,
 				AE411553285339E900F459F3 /* LoginRequest.swift */,
 				AE41155528533BF200F459F3 /* LoginResponse.swift */,
+				AE008DBB285499D60024D927 /* PostRegister.swift */,
+				AEC5C4812856629900939A61 /* RegisterRequest.swift */,
+				AEC5C483285662DD00939A61 /* RegisterResponse.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -253,7 +251,6 @@
 			files = (
 				AE3D91E72807F5310045721C /* Preview Assets.xcassets in Resources */,
 				AE3D91E42807F5310045721C /* Assets.xcassets in Resources */,
-				AE3D920728080E0E0045721C /* landmarkData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,13 +304,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE3D91EF2807F55A0045721C /* LogInView.swift in Sources */,
+				AEC5C484285662DD00939A61 /* RegisterResponse.swift in Sources */,
 				AE4115522853398300F459F3 /* PostLogin.swift in Sources */,
 				AE411529283B672700F459F3 /* Helpers.swift in Sources */,
+				AEC5C4822856629900939A61 /* RegisterRequest.swift in Sources */,
 				AE41154E284B375600F459F3 /* RoomRequest.swift in Sources */,
 				AE3D920428080D910045721C /* Place.swift in Sources */,
 				AE3D91F32807F5A30045721C /* SignUpView.swift in Sources */,
 				AE41155628533BF200F459F3 /* LoginResponse.swift in Sources */,
 				AE3D91F12807F59B0045721C /* RoomListView.swift in Sources */,
+				AE008DBC285499D60024D927 /* PostRegister.swift in Sources */,
 				AE3D91F62807F5EB0045721C /* ButtonStyles.swift in Sources */,
 				20DEB787281D1AD100B7C1D8 /* Empty.swift in Sources */,
 				AE411554285339E900F459F3 /* LoginRequest.swift in Sources */,

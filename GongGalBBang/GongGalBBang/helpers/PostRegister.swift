@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-class PostLogin: ObservableObject {
+class PostRegister: ObservableObject {
 //    static let shared = GetRoom()
-    @Published var res = LoginResult()
+    @Published var res = RegisterResult()
     
-    func postUser(loginReq : LoginRequest) {
+    func postRegister(registerReq : RegisterRequest) {
         
-        let reqUrl = "https://4mer5886ri.execute-api.ap-northeast-2.amazonaws.com/default/Check_UserData/send"
+        let reqUrl = "https://ug3s7fe01l.execute-api.ap-northeast-2.amazonaws.com/default/send_UserData_to_RDS/save"
             
         guard let url = URL(string: reqUrl) else {
             print("Invalid url string: \(reqUrl)")
@@ -22,8 +22,13 @@ class PostLogin: ObservableObject {
 
         var urlRequest = URLRequest(url: url)
         
-        let body: [String: Any] = ["user_id": loginReq.user_id, "user_pw":
-                                    loginReq.user_pw]
+        let body: [String: Any] = ["name" : registerReq.name,
+                                   "user_id" : registerReq.user.user_id,
+                                   "user_pw" : registerReq.user.user_pw,
+                                   "department" : registerReq.department,
+                                   "circle" : registerReq.circle]
+        
+        print(body)
         
         let jsonData = try? JSONSerialization.data(withJSONObject: body)
         
@@ -38,7 +43,7 @@ class PostLogin: ObservableObject {
                 return
             }
             do {
-                let decodedData = try JSONDecoder().decode(LoginResponse.self, from: data)
+                let decodedData = try JSONDecoder().decode(RegisterResponse.self, from: data)
                 DispatchQueue.main.async {
                     self.res = decodedData.body
                     print(self.res)

@@ -14,10 +14,10 @@ struct RoomResponse: Codable, Hashable {
 
 struct RoomResult: Codable, Hashable {
     var className: Int
-    var data : [Date]
+    var data : [Datee]
 }
 
-struct Date: Codable, Hashable {
+struct Datee: Codable, Hashable {
     var date : String
     var member : Float
 }

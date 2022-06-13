@@ -19,6 +19,12 @@ struct SignUpView: View {
     @State var showingToastTitle = ""
     @State var showingToastMessage = ""
     
+    @StateObject private var postRegister = PostRegister()
+    
+    @State var clubSelectedItems:[Club]
+    
+    @State var majorSelectedItems:[Major]
+    
     var body: some View {
         NavigationView {
             HStack {
@@ -26,7 +32,7 @@ struct SignUpView: View {
                 Spacer()
                 ZStack {
                     VStack {
-                        NavigationLink(destination: MainView().navigationBarHidden(true), tag: 1, selection: $STATE) {
+                        NavigationLink(destination: LogInView().navigationBarHidden(true), tag: 1, selection: $STATE) {
                             EmptyView()
                         }
                         
@@ -59,6 +65,31 @@ struct SignUpView: View {
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(.black)
                         }
+                        NavigationLink(destination: {
+                            MajorSelectPickerView( selectedItems: $majorSelectedItems)
+                        }, label: {
+                            HStack {
+                                Text("소속")
+                                    .foregroundColor(.black)
+                                Spacer()
+                                Image(systemName: "\(majorSelectedItems.count).circle")
+                                    .foregroundColor(.black)
+                                    .font(.title2)
+                            }
+                        }).padding(.vertical)
+                        
+                        NavigationLink(destination: {
+                            ClubSelectPickerView( selectedItems: $clubSelectedItems)
+                        }, label: {
+                            HStack {
+                                Text("동아리")
+                                    .foregroundColor(.black)
+                                Spacer()
+                                Image(systemName: "\(clubSelectedItems.count).circle")
+                                    .foregroundColor(.black)
+                                    .font(.title2)
+                            }
+                        })
                         
                         // checkbox
                         Toggle("개인정보 수집에 동의합니다.", isOn: $emailUpdate)
@@ -95,7 +126,103 @@ struct SignUpView: View {
                                 showingToastMessage = "개인정보 수집에 동의해주세요"
                             }
                             else {
-                                STATE = 1
+                                let user = LoginRequest(user_id: emailAddress, user_pw: password)
+                                var major = ""
+                                var club = ""
+                                
+                                for item in majorSelectedItems {
+                                    switch item {
+                                    case .소프트웨어학과:
+                                        if major == "" {
+                                            major += "1"
+                                        }
+                                        else {
+                                            major += ",1"
+                                        }
+                                    case .항공전자정보공학부:
+                                        if major == "" {
+                                            major += "2"
+                                        }
+                                        else {
+                                            major += ",2"
+                                        }
+                                    case .항공우주및기계공학부:
+                                        if major == "" {
+                                            major += "3"
+                                        }
+                                        else {
+                                            major += ",3"
+                                        }
+                                    case .신소재공학과:
+                                        if major == "" {
+                                            major += "4"
+                                        }
+                                        else {
+                                            major += ",4"
+                                        }
+                                    case .항공교통물류학부:
+                                        if major == "" {
+                                            major += "5"
+                                        }
+                                        else {
+                                            major += ",5"
+                                        }
+                                    }
+                                }
+                                for item in clubSelectedItems {
+                                    switch item {
+                                    case .줄울림:
+                                        if club == "" {
+                                            club += "1"
+                                        }
+                                        else {
+                                            club += ",1"
+                                        }
+                                    case .도스:
+                                        if club == "" {
+                                            club += "2"
+                                        }
+                                        else {
+                                            club += ",2"
+                                        }
+                                    case .에어비트:
+                                        if club == "" {
+                                            club += "3"
+                                        }
+                                        else {
+                                            club += ",3"
+                                        }
+                                    case .재징유:
+                                        if club == "" {
+                                            club += "4"
+                                        }
+                                        else {
+                                            club += ",4"
+                                        }
+                                    case .광끼:
+                                        if club == "" {
+                                            club += "5"
+                                        }
+                                        else {
+                                            club += ",5"
+                                        }
+                                    }
+                                }
+                                
+                                let req = RegisterRequest(name: fullName, user: user, department: major, circle: club)
+                                
+                                postRegister.postRegister(registerReq: req)
+                                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                                    if(postRegister.res.statusCode == 200) {
+                                    STATE = 1
+                                    }
+                                    else if(postRegister.res.statusCode == 409) {
+                                        print("here")
+                                        showingToast = true
+                                        showingToastTitle = "회원가입 오류"
+                                        showingToastMessage = "이미 존재하는 이메일입니다."
+                                    }
+                                }
                             }
                         }){
                             Text("SIGN UP")
@@ -140,6 +267,6 @@ struct SignUpView: View {
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        SignUpView(clubSelectedItems: [], majorSelectedItems: [])
     }
 }

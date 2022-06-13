@@ -38,6 +38,7 @@ class GetRoom: ObservableObject {
                 let rooms = try JSONDecoder().decode(RoomResponse.self, from: data)
                 DispatchQueue.main.async {
                     self.res = rooms.result
+                    print(self.res)
                 }
             }
             catch{

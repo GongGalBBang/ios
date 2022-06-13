@@ -11,10 +11,3 @@ struct LoginRequest: Hashable, Codable {
     var user_id : String
     var user_pw : String
 }
-
-struct UserRegister: Hashable, Codable {
-    var name : String
-    var user : LoginRequest
-    var department: [Int]
-    var circle : [Int]
-}

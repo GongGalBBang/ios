@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var STATE: Int? = 0
+    @Binding var user: LoginResult
 //    var getRoom = GetRoom()
     
     var body: some View {
@@ -33,13 +34,13 @@ struct MainView: View {
                                 .foregroundColor(.black)
                                 .font(.system(size: 18, weight: .light))
                         }
-                        .padding(EdgeInsets(top: 20, leading: 10, bottom: 0, trailing: 0))
+                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 0, trailing: 0))
                         Button(action: {STATE = 1}) {
                             Text("회원탈퇴")
                                 .foregroundColor(.black)
                                 .font(.system(size: 18, weight: .light))
                         }
-                        .padding(EdgeInsets(top: 20, leading: 10, bottom: 0, trailing: 0))
+                        .padding(EdgeInsets(top: 20, leading: 15, bottom: 0, trailing: 0))
                         Spacer()
                         
                     }
@@ -58,6 +59,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(user: .constant(LoginResult(statusCode: 1, result: Result(name: "박춘해", club: "[5]", major: "[2]"))))
     }
 }

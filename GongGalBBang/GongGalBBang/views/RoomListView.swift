@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct RoomListView: View {
     @State private var showFavoritesOnly = false
@@ -51,7 +52,10 @@ struct RoomListView: View {
             }
         }
         .onAppear {
-            let req = RoomRequest(access_time: "2022-06-03_03:27:32", club_number: "2,3", major_number: "1,2")
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let currentDate = formatter.string(from: Date())
+            let req = RoomRequest(access_time: currentDate, club_number: "1", major_number: "1")
             getRoomL.getRooms(roomReq: req)
         }
     }
