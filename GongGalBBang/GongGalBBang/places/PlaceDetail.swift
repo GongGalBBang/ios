@@ -6,49 +6,30 @@
 //
 
 import SwiftUI
+import Foundation
 
 // 그래프 그리기
-struct Confuse {
-    let score: Double
-}
-
-private func getHistoricalConfuse() -> [Confuse] {
-    
-    var confuses = [Confuse]()
-    
-    for i in 1...20 {
-        let confuse = Confuse(score: (Double)(i))
-        confuses.append(confuse)
-        
-    }
-    
-    return confuses
-}
-
-private func getLabels() -> [String] {
-    return (2015...2021).map { String($0) }
-}
-
 struct LineChartView: View {
     
-    let values: [Int]
-    let labels: [String]
+    let date: [Datee]
     
     let screenWidth = UIScreen.main.bounds.width
     
     private var path: Path {
         
-        if values.isEmpty {
+        if date.isEmpty {
             return Path()
         }
         
-        var offsetX: Int = Int(screenWidth/CGFloat(values.count))
+        var offsetX: Double = Double(screenWidth/(CGFloat(date.count) + 5))
         var path = Path()
-        path.move(to: CGPoint(x: offsetX, y: values[0]))
+        path.move(to: CGPoint(x: offsetX, y: date[0].member*20))
         
-        for value in values {
-            offsetX += Int(screenWidth/CGFloat(values.count))
-            path.addLine(to: CGPoint(x: offsetX, y: value))
+        for value in date {
+            if(value.date != "10") {
+                offsetX += Double(screenWidth/(CGFloat(date.count) + 0.5))
+                path.addLine(to: CGPoint(x: offsetX, y: value.member*20))
+            }
         }
         return path
     }
@@ -61,9 +42,9 @@ struct LineChartView: View {
 
 
             HStack {
-                ForEach(labels, id: \.self) { label in
-                   Text(label)
-                       .frame(width: screenWidth/CGFloat(labels.count) - 10)
+                ForEach(date, id: \.self) { label in
+                    Text(label.date)
+                       .frame(width: screenWidth/(CGFloat(date.count) + 5))
                    
                 }
             }
@@ -82,22 +63,29 @@ struct PlaceDetail: View {
         getRoom.res.firstIndex(where: {$0.className == room.className})!
     }
     
-    let scores = getHistoricalConfuse().map { Int($0.score) }
-        let labels = getLabels()
     
     var body: some View {
+        let name = getRoomName(room:room)
+        
         NavigationView {
             ScrollView() {
                 VStack{
-                    Image("GongGalBBang").resizable().frame(width: 200, height: 200)
+                    Image(name).resizable().frame(width: 200, height: 200)
                     HStack {
-                        Text("\(room.className)호")
+                        Text(name)
                             .font(.body)
 //                        FavoriteButton(isSet: $getRoom.rooms[roomIndex].isFavorite)
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
-//                    Text("예상 혼잡도: \(place.state)")
-//                    Text("분석 혼잡도: \(place.state)")
+                    
+                    let hour = getHour()
+                    let confuse = getConfuse(date: room.data, time: hour)
+                                   
+                    HStack {
+                        Text("현재 \(hour)시 혼잡도: ")
+                        Text(confuse).foregroundColor(getConfuseColor(confuse: confuse))
+                    }
+                    
                     Divider()
                         .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                     
@@ -107,7 +95,7 @@ struct PlaceDetail: View {
                     VStack {
                         Text("그래프")
                             .font(.body)
-                        LineChartView(values: scores, labels: labels)
+                        LineChartView(date: room.data)
                     }.frame(width: .infinity, height: 250)
                     .foregroundColor(.black)
                     Spacer()
@@ -115,7 +103,7 @@ struct PlaceDetail: View {
             }
             .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
             .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("\(room.className)호")
+            .navigationTitle(name)
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
@@ -158,9 +146,7 @@ struct PlaceDetail: View {
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
-    static let getRoom = GetRoom()
     static var previews: some View {
-        PlaceDetail(room: GetRoom().res[0])
-            .environmentObject(getRoom)
+        PlaceDetail(room: RoomResult(className: 101, data: [Datee(date: "10", member: 3), Datee(date: "11", member: 4), Datee(date: "12", member: 3), Datee(date: "13", member: 6), Datee(date: "14", member: 8), Datee(date: "15", member: 10)]))
     }
 }

@@ -7,11 +7,13 @@
 
 import SwiftUI
 import ExytePopupView
+import AnyFormatKitSwiftUI
 
 struct SignUpView: View {
     @State var fullName = ""
     @State var emailAddress = ""
     @State var password = ""
+    @State var phoneNumber = ""
     @State var emailUpdate = false
     @Environment(\.presentationMode) var presentationMode
     @State var STATE: Int? = 0
@@ -38,33 +40,39 @@ struct SignUpView: View {
                         
                         // full name
                         VStack(alignment: .leading) {
-                            Text("Full Name")
+                            Text("이름")
                                 .foregroundColor(.black)
                             TextField("Enter your Full Name", text: $fullName)
                                 .textFieldStyle(.roundedBorder)
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(.black)
-                        }
-                        
                         // email
-                        VStack(alignment: .leading) {
-                            Text("Email")
-                                .foregroundColor(.black)
-                            TextField("Enter your Email", text: $emailAddress)
-                                .textFieldStyle(.roundedBorder)
-                                .multilineTextAlignment(.leading)
-                                .foregroundColor(.black)
+                        Text("이메일")
+                            .foregroundColor(.black)
+                            .padding(.top, 10)
+                        TextField("Enter your Email", text: $emailAddress)
+                            .textFieldStyle(.roundedBorder)
+                            .multilineTextAlignment(.leading)
+                            .foregroundColor(.black)
+                        // password
+                        Text("비밀번호")
+                            .foregroundColor(.black)
+                            .padding(.top, 10)
+                        SecureField("Must be at least 6 characters", text: $password)
+                            .textFieldStyle(.roundedBorder)
+                            .multilineTextAlignment(.leading)
+                            .foregroundColor(.black)
+                        // phone
+                        Text("전화번호")
+                            .foregroundColor(.black)
+                            .padding(.top, 10)
+                        FormatTextField(
+                            unformattedText: $phoneNumber, placeholder: "Enter your Phone Number",
+                            textPattern: "###-####-####"
+                        )
+                        .padding(.bottom, 20)
                         }
                         
-                        // password
-                        VStack(alignment: .leading) {
-                            Text("Password")
-                                .foregroundColor(.black)
-                            SecureField("Must be at least 6 characters", text: $password)
-                                .textFieldStyle(.roundedBorder)
-                                .multilineTextAlignment(.leading)
-                                .foregroundColor(.black)
-                        }
                         NavigationLink(destination: {
                             MajorSelectPickerView( selectedItems: $majorSelectedItems)
                         }, label: {
@@ -100,132 +108,56 @@ struct SignUpView: View {
                         
                         // sign up button
                         Button(action: {
-                            if(fullName == "" || emailAddress == "" || password == "") {
-                                showingToast = true
-                                showingToastTitle = "오류"
-                                showingToastMessage = "모든 정보를 입력해주세요"
-                            }
-                            else if(!isValidName(testStr: fullName)) {
-                                showingToast = true
-                                showingToastTitle = "이름 오류"
-                                showingToastMessage = "올바른 이름 형식을 입력해주세요"
-                            }
-                            else if(!isValidEmail(testStr: emailAddress)) {
-                                showingToast = true
-                                showingToastTitle = "이메일 오류"
-                                showingToastMessage = "올바른 이메일 형식을 입력해주세요"
-                            }
-                            else if(!isValidPassword(testStr: password)){
-                                showingToast = true
-                                showingToastTitle = "비밀번호 오류"
-                                showingToastMessage = "올바른 비밀번호 형식을 입력해주세요"
-                            }
-                            else if(!emailUpdate) {
-                                showingToast = true
-                                showingToastTitle = "접근 오류"
-                                showingToastMessage = "개인정보 수집에 동의해주세요"
-                            }
-                            else {
-                                let user = LoginRequest(user_id: emailAddress, user_pw: password)
-                                var major = ""
-                                var club = ""
-                                
-                                for item in majorSelectedItems {
-                                    switch item {
-                                    case .소프트웨어학과:
-                                        if major == "" {
-                                            major += "1"
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                if(fullName == "" || emailAddress == "" || password == "") {
+                                    showingToast = true
+                                    showingToastTitle = "오류"
+                                    showingToastMessage = "모든 정보를 입력해주세요"
+                                }
+                                else if(!isValidName(testStr: fullName)) {
+                                    showingToast = true
+                                    showingToastTitle = "이름 오류"
+                                    showingToastMessage = "올바른 이름 형식을 입력해주세요"
+                                }
+                                else if(!isValidEmail(testStr: emailAddress)) {
+                                    showingToast = true
+                                    showingToastTitle = "이메일 오류"
+                                    showingToastMessage = "올바른 이메일 형식을 입력해주세요"
+                                }
+                                else if(!isValidPassword(testStr: password)){
+                                    showingToast = true
+                                    showingToastTitle = "비밀번호 오류"
+                                    showingToastMessage = "올바른 비밀번호 형식을 입력해주세요"
+                                }
+                                else if(!emailUpdate) {
+                                    showingToast = true
+                                    showingToastTitle = "접근 오류"
+                                    showingToastMessage = "개인정보 수집에 동의해주세요"
+                                }
+                                else {
+                                    let user = LoginRequest(user_id: emailAddress, user_pw: password)
+                                    let major = getMajorSelected(majorSelectedItems: majorSelectedItems)
+                                    let club = getClubSelected(clubSelectedItems: clubSelectedItems)
+                                    
+                                    let req = RegisterRequest(name: fullName, user: user, department: major, circle: club)
+                                    
+                                    postRegister.postRegister(registerReq: req)
+                                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                                        if(postRegister.res.statusCode == 200) {
+                                        STATE = 1
                                         }
-                                        else {
-                                            major += ",1"
-                                        }
-                                    case .항공전자정보공학부:
-                                        if major == "" {
-                                            major += "2"
-                                        }
-                                        else {
-                                            major += ",2"
-                                        }
-                                    case .항공우주및기계공학부:
-                                        if major == "" {
-                                            major += "3"
-                                        }
-                                        else {
-                                            major += ",3"
-                                        }
-                                    case .신소재공학과:
-                                        if major == "" {
-                                            major += "4"
-                                        }
-                                        else {
-                                            major += ",4"
-                                        }
-                                    case .항공교통물류학부:
-                                        if major == "" {
-                                            major += "5"
-                                        }
-                                        else {
-                                            major += ",5"
+                                        else if(postRegister.res.statusCode == 409) {
+                                            print("here")
+                                            showingToast = true
+                                            showingToastTitle = "회원가입 오류"
+                                            showingToastMessage = "이미 존재하는 이메일입니다."
                                         }
                                     }
                                 }
-                                for item in clubSelectedItems {
-                                    switch item {
-                                    case .줄울림:
-                                        if club == "" {
-                                            club += "1"
-                                        }
-                                        else {
-                                            club += ",1"
-                                        }
-                                    case .도스:
-                                        if club == "" {
-                                            club += "2"
-                                        }
-                                        else {
-                                            club += ",2"
-                                        }
-                                    case .에어비트:
-                                        if club == "" {
-                                            club += "3"
-                                        }
-                                        else {
-                                            club += ",3"
-                                        }
-                                    case .재징유:
-                                        if club == "" {
-                                            club += "4"
-                                        }
-                                        else {
-                                            club += ",4"
-                                        }
-                                    case .광끼:
-                                        if club == "" {
-                                            club += "5"
-                                        }
-                                        else {
-                                            club += ",5"
-                                        }
-                                    }
-                                }
-                                
-                                let req = RegisterRequest(name: fullName, user: user, department: major, circle: club)
-                                
-                                postRegister.postRegister(registerReq: req)
-                                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-                                    if(postRegister.res.statusCode == 200) {
-                                    STATE = 1
-                                    }
-                                    else if(postRegister.res.statusCode == 409) {
-                                        print("here")
-                                        showingToast = true
-                                        showingToastTitle = "회원가입 오류"
-                                        showingToastMessage = "이미 존재하는 이메일입니다."
-                                    }
-                                }
                             }
+                            
                         }){
-                            Text("SIGN UP")
+                            Text("회원가입 하기")
                                 .foregroundColor(.white)
                                 .fontWeight(.semibold)
                                 .font(.system(size: 17))
@@ -249,7 +181,7 @@ struct SignUpView: View {
         }
                 
             .padding(EdgeInsets(top: 40, leading: 0, bottom: 0, trailing: 0))
-            .navigationTitle("SIGN UP")
+            .navigationTitle("회원가입")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {

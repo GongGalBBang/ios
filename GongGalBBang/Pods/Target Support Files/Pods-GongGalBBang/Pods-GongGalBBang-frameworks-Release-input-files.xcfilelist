@@ -1,4 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-GongGalBBang/Pods-GongGalBBang-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AWSAPIGateway/AWSAPIGateway.framework
 ${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework
+${BUILT_PRODUCTS_DIR}/AnyFormatKit/AnyFormatKit.framework
+${BUILT_PRODUCTS_DIR}/AnyFormatKitSwiftUI/AnyFormatKitSwiftUI.framework
 ${BUILT_PRODUCTS_DIR}/ExytePopupView/ExytePopupView.framework

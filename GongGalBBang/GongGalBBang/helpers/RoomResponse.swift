@@ -19,5 +19,5 @@ struct RoomResult: Codable, Hashable {
 
 struct Datee: Codable, Hashable {
     var date : String
-    var member : Float
+    var member : Double
 }

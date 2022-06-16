@@ -11,12 +11,13 @@ struct PlaceRow: View {
     var room: RoomResult
     
     var body: some View {
+        let name = getRoomName(room:room)
         HStack {
-//            place.image
-//                .resizable()
-//                .frame(width: 50, height: 50)
+            Image(name)
+                .resizable()
+                .frame(width: 50, height: 50)
             VStack(alignment: .leading){
-                Text("\(room.className)호")
+                Text(getRoomName(room:room))
             }
             
             Spacer()
@@ -30,11 +31,9 @@ struct PlaceRow: View {
 }
 
 struct PlaceRow_Previews: PreviewProvider {
-    static var room = GetRoom().res
     static var previews: some View {
         Group {
-            PlaceRow(room: room[0])
-            PlaceRow(room: room[1])
+            PlaceRow(room: RoomResult(className: 101, data: [Datee(date: "10", member: 3), Datee(date: "11", member: 4)]))
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

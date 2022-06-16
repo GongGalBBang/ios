@@ -20,7 +20,7 @@ struct LogInView: View {
     
     var body: some View {
         NavigationView{
-            ZStack {
+            VStack {
                 HStack {
                     Spacer()
                     Spacer()
@@ -32,6 +32,10 @@ struct LogInView: View {
                             .navigationBarHidden(true),  tag: 2, selection: $STATE) {
                             EmptyView()
                         }
+                        NavigationLink(destination: AccountView()
+                            .navigationBarHidden(true),  tag: 3, selection: $STATE) {
+                            EmptyView()
+                        }
                         
                         Image("GongGalBBang")
                             .resizable()
@@ -41,13 +45,13 @@ struct LogInView: View {
                             .padding()
                         
                         VStack(alignment: .leading) {
-                            Text("Email address")
+                            Text("이메일")
                             TextField("Enter your Email address", text: $emailAddress)
                                 .textFieldStyle(.roundedBorder)
                         }
                         
                         VStack(alignment: .leading) {
-                            Text("Password")
+                            Text("비밀번호")
                             SecureField("Enter your Password", text: $password)
                                 .textFieldStyle(.roundedBorder)
                         }
@@ -81,29 +85,37 @@ struct LogInView: View {
                                         showingToastMessage = "다시 입력해주세요"
                                     }
                                 }
-                            } }) {
-                            Text("Log In")
+                            }
+                        }) {
+                            Text("로그인하기")
                                 .foregroundColor(.black)
                                 .fontWeight(.semibold)
                                 .font(.title3)
                         }
                             .buttonStyle(LoginStyle())
-                            .padding()
+                            .padding(EdgeInsets(top: 40, leading: 0, bottom: 5, trailing: 0))
+                        
+                        Button(action: {STATE = 3}) {
+                            Text("아이디 / 비밀번호 찾기")
+                                .fontWeight(.light)
+                                .foregroundColor(.gray)
+                                .font(.system(size:15))
+                        }
+                        
+                        Divider()
                         
                         Button(action: {STATE = 2}) {
-                            Text("Don't have account? Sign Up")
+                            Text("계정이 없으신가요? 가입하기")
                                 .fontWeight(.light)
                         }
-                        Spacer()
                     }
-                    Spacer()
-                    Spacer()
                 }
+                Spacer()
             }
             .popup(isPresented: $showingToast, type: .floater(verticalPadding: 20), position: .bottom, animation: .spring(), autohideIn: 2, closeOnTap: true, closeOnTapOutside: true, view: {
                 createBottomToastMessage(title: showingToastTitle, message: showingToastMessage)
             })
-            .navigationTitle("LOG IN")
+            .navigationTitle("로그인")
             .navigationBarTitleDisplayMode(.inline)
         }
     }

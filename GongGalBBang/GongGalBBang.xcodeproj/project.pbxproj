@@ -11,6 +11,10 @@
 		20DEB789281D1AFE00B7C1D8 /* OUTPUTDBtoAPIGatewayAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DEB788281D1AFE00B7C1D8 /* OUTPUTDBtoAPIGatewayAPIClient.swift */; };
 		53B2C923D6DE503B977551EB /* Pods_GongGalBBang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993A51DC79EBD628F2750F3C /* Pods_GongGalBBang.framework */; };
 		AE008DBC285499D60024D927 /* PostRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE008DBB285499D60024D927 /* PostRegister.swift */; };
+		AE1207EB285B203600BDBC8E /* SuccessGetIdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1207EA285B203600BDBC8E /* SuccessGetIdView.swift */; };
+		AE1207ED285B20B700BDBC8E /* FindIdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1207EC285B20B700BDBC8E /* FindIdView.swift */; };
+		AE1207EF285B224100BDBC8E /* ChangePwView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1207EE285B224100BDBC8E /* ChangePwView.swift */; };
+		AE1207F1285B2B9E00BDBC8E /* ChangePwReqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1207F0285B2B9E00BDBC8E /* ChangePwReqView.swift */; };
 		AE206BC4281442FD00A609BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE206BC3281442FD00A609BB /* MainView.swift */; };
 		AE3D91E02807F5310045721C /* GongGalBBangApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */; };
 		AE3D91E42807F5310045721C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3D91E32807F5310045721C /* Assets.xcassets */; };
@@ -32,6 +36,10 @@
 		AE41155628533BF200F459F3 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41155528533BF200F459F3 /* LoginResponse.swift */; };
 		AEC5C4822856629900939A61 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5C4812856629900939A61 /* RegisterRequest.swift */; };
 		AEC5C484285662DD00939A61 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5C483285662DD00939A61 /* RegisterResponse.swift */; };
+		AEC5C4862859AD7100939A61 /* PostAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5C4852859AD7100939A61 /* PostAccount.swift */; };
+		AEC5C4882859ADC900939A61 /* AccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5C4872859ADC900939A61 /* AccountRequest.swift */; };
+		AEC5C48A2859B20C00939A61 /* AccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5C4892859B20C00939A61 /* AccountResponse.swift */; };
+		AEC5C48C2859BDEB00939A61 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5C48B2859BDEB00939A61 /* AccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +51,10 @@
 		7B42C2D5D6A5E712C754AF0A /* Pods-GongGalBBang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GongGalBBang.release.xcconfig"; path = "Target Support Files/Pods-GongGalBBang/Pods-GongGalBBang.release.xcconfig"; sourceTree = "<group>"; };
 		993A51DC79EBD628F2750F3C /* Pods_GongGalBBang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GongGalBBang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE008DBB285499D60024D927 /* PostRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRegister.swift; sourceTree = "<group>"; };
+		AE1207EA285B203600BDBC8E /* SuccessGetIdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessGetIdView.swift; sourceTree = "<group>"; };
+		AE1207EC285B20B700BDBC8E /* FindIdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIdView.swift; sourceTree = "<group>"; };
+		AE1207EE285B224100BDBC8E /* ChangePwView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePwView.swift; sourceTree = "<group>"; };
+		AE1207F0285B2B9E00BDBC8E /* ChangePwReqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePwReqView.swift; sourceTree = "<group>"; };
 		AE206BC3281442FD00A609BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AE3D91DC2807F5310045721C /* GongGalBBang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GongGalBBang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GongGalBBangApp.swift; sourceTree = "<group>"; };
@@ -66,6 +78,10 @@
 		AE41155528533BF200F459F3 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		AEC5C4812856629900939A61 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		AEC5C483285662DD00939A61 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		AEC5C4852859AD7100939A61 /* PostAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAccount.swift; sourceTree = "<group>"; };
+		AEC5C4872859ADC900939A61 /* AccountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRequest.swift; sourceTree = "<group>"; };
+		AEC5C4892859B20C00939A61 /* AccountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountResponse.swift; sourceTree = "<group>"; };
+		AEC5C48B2859BDEB00939A61 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +148,11 @@
 				AE3D91F22807F5A30045721C /* SignUpView.swift */,
 				AE3D91EE2807F55A0045721C /* LogInView.swift */,
 				AE206BC3281442FD00A609BB /* MainView.swift */,
+				AEC5C48B2859BDEB00939A61 /* AccountView.swift */,
+				AE1207EA285B203600BDBC8E /* SuccessGetIdView.swift */,
+				AE1207EC285B20B700BDBC8E /* FindIdView.swift */,
+				AE1207EE285B224100BDBC8E /* ChangePwView.swift */,
+				AE1207F0285B2B9E00BDBC8E /* ChangePwReqView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -168,6 +189,9 @@
 				AE008DBB285499D60024D927 /* PostRegister.swift */,
 				AEC5C4812856629900939A61 /* RegisterRequest.swift */,
 				AEC5C483285662DD00939A61 /* RegisterResponse.swift */,
+				AEC5C4852859AD7100939A61 /* PostAccount.swift */,
+				AEC5C4872859ADC900939A61 /* AccountRequest.swift */,
+				AEC5C4892859B20C00939A61 /* AccountResponse.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -303,27 +327,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE1207F1285B2B9E00BDBC8E /* ChangePwReqView.swift in Sources */,
 				AE3D91EF2807F55A0045721C /* LogInView.swift in Sources */,
 				AEC5C484285662DD00939A61 /* RegisterResponse.swift in Sources */,
 				AE4115522853398300F459F3 /* PostLogin.swift in Sources */,
+				AE1207EF285B224100BDBC8E /* ChangePwView.swift in Sources */,
 				AE411529283B672700F459F3 /* Helpers.swift in Sources */,
 				AEC5C4822856629900939A61 /* RegisterRequest.swift in Sources */,
+				AEC5C4882859ADC900939A61 /* AccountRequest.swift in Sources */,
 				AE41154E284B375600F459F3 /* RoomRequest.swift in Sources */,
 				AE3D920428080D910045721C /* Place.swift in Sources */,
 				AE3D91F32807F5A30045721C /* SignUpView.swift in Sources */,
+				AEC5C4862859AD7100939A61 /* PostAccount.swift in Sources */,
 				AE41155628533BF200F459F3 /* LoginResponse.swift in Sources */,
 				AE3D91F12807F59B0045721C /* RoomListView.swift in Sources */,
+				AE1207ED285B20B700BDBC8E /* FindIdView.swift in Sources */,
 				AE008DBC285499D60024D927 /* PostRegister.swift in Sources */,
 				AE3D91F62807F5EB0045721C /* ButtonStyles.swift in Sources */,
 				20DEB787281D1AD100B7C1D8 /* Empty.swift in Sources */,
 				AE411554285339E900F459F3 /* LoginRequest.swift in Sources */,
 				AE3D91E02807F5310045721C /* GongGalBBangApp.swift in Sources */,
+				AEC5C48A2859B20C00939A61 /* AccountResponse.swift in Sources */,
 				AE206BC4281442FD00A609BB /* MainView.swift in Sources */,
 				AE3D91FF28080D050045721C /* PlaceRow.swift in Sources */,
+				AE1207EB285B203600BDBC8E /* SuccessGetIdView.swift in Sources */,
 				AE3D91FE28080D050045721C /* PlaceDetail.swift in Sources */,
 				20DEB789281D1AFE00B7C1D8 /* OUTPUTDBtoAPIGatewayAPIClient.swift in Sources */,
 				AE411548284B281700F459F3 /* GetRoom.swift in Sources */,
 				AE3D920228080D730045721C /* ModelData.swift in Sources */,
+				AEC5C48C2859BDEB00939A61 /* AccountView.swift in Sources */,
 				AE411550284C7A2F00F459F3 /* RoomResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

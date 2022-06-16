@@ -5,5 +5,6 @@ target 'GongGalBBang' do
   use_frameworks!
 
   pod 'AWSAPIGateway', '~> 2.4.7'
+  pod 'AnyFormatKitSwiftUI', '~> 0.5.3'
   pod 'ExytePopupView'
 end

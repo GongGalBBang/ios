@@ -12,6 +12,8 @@ struct RoomListView: View {
     @State private var showFavoritesOnly = false
     
     @StateObject private var getRoomL = GetRoom()
+    var major : String
+    var club : String
     
 //    var filteredLandmarks: [Place] {
 //        modelData.places.filter { place in
@@ -19,17 +21,14 @@ struct RoomListView: View {
 //        }
 //    }
     
-    init() {
-        UITableView.appearance().backgroundColor = .white
-    }
-    
     var body: some View {
         NavigationView {
             VStack {
                 Divider()
                 List{
                     Toggle(isOn: $showFavoritesOnly) {
-                        Text("Favorites only")
+                        Text("원하는 방만 보기")
+                            .fontWeight(.bold)
                     }
                     ForEach(getRoomL.res, id: \.self) { room in
                         NavigationLink {
@@ -45,17 +44,20 @@ struct RoomListView: View {
 //                            PlaceRow(place: place)
 //                        }
 //                    }
+                    Spacer()
                 }
                 .edgesIgnoringSafeArea(.all)
-                .navigationTitle("ROOM LIST")
+                .navigationTitle("방 목록")
                 .navigationBarTitleDisplayMode(.inline)
             }
         }
         .onAppear {
+            UITableView.appearance().backgroundColor = .white
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
             let currentDate = formatter.string(from: Date())
-            let req = RoomRequest(access_time: currentDate, club_number: "1", major_number: "1")
+            let req = RoomRequest(access_time: currentDate, club_number: club, major_number: major)
+            print(req)
             getRoomL.getRooms(roomReq: req)
         }
     }
@@ -92,6 +94,6 @@ struct RoomListView: View {
 struct RoomListViewView_Previews:
     PreviewProvider {
         static var previews: some View {
-            RoomListView().environmentObject(GetRoom())
+            RoomListView(major: "1", club: "1").environmentObject(GetRoom())
         }
 }

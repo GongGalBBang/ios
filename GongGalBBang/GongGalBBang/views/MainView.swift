@@ -11,7 +11,6 @@ struct MainView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var STATE: Int? = 0
     @Binding var user: LoginResult
-//    var getRoom = GetRoom()
     
     var body: some View {
         NavigationView {
@@ -20,7 +19,7 @@ struct MainView: View {
                     EmptyView()
                 }
                 TabView {
-                    RoomListView()
+                    RoomListView(major: user.result!.major, club: user.result!.club)
 //                        .environmentObject(getRoom)
                         .tabItem{
                             Image(systemName: "list.dash")
