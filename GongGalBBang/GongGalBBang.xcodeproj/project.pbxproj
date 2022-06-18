@@ -15,11 +15,24 @@
 		AE1207ED285B20B700BDBC8E /* FindIdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1207EC285B20B700BDBC8E /* FindIdView.swift */; };
 		AE1207EF285B224100BDBC8E /* ChangePwView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1207EE285B224100BDBC8E /* ChangePwView.swift */; };
 		AE1207F1285B2B9E00BDBC8E /* ChangePwReqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1207F0285B2B9E00BDBC8E /* ChangePwReqView.swift */; };
+		AE1207F7285B3AF300BDBC8E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1207F6285B3AF300BDBC8E /* Launch Screen.storyboard */; };
+		AE1207F9285B505700BDBC8E /* SuccessChangePwView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1207F8285B505700BDBC8E /* SuccessChangePwView.swift */; };
+		AE1207FB285B63AF00BDBC8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1207FA285B63AF00BDBC8E /* ContentView.swift */; };
+		AE1207FE285C664F00BDBC8E /* TutorialSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1207FD285C664F00BDBC8E /* TutorialSplashView.swift */; };
+		AE120804285CAA9100BDBC8E /* TutorialMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE120803285CAA9100BDBC8E /* TutorialMainView.swift */; };
+		AE120806285CD3DA00BDBC8E /* TutorialRoomDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE120805285CD3DA00BDBC8E /* TutorialRoomDetail.swift */; };
+		AE120808285D6D7B00BDBC8E /* MypageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE120807285D6D7B00BDBC8E /* MypageView.swift */; };
 		AE206BC4281442FD00A609BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE206BC3281442FD00A609BB /* MainView.swift */; };
+		AE2E522E285D8036004E6FA1 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE2E5228285D8035004E6FA1 /* NotoSansKR-Bold.otf */; };
+		AE2E522F285D8036004E6FA1 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE2E5229285D8035004E6FA1 /* NotoSansKR-Black.otf */; };
+		AE2E5230285D8036004E6FA1 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE2E522A285D8035004E6FA1 /* NotoSansKR-Light.otf */; };
+		AE2E5231285D8036004E6FA1 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE2E522B285D8035004E6FA1 /* NotoSansKR-Medium.otf */; };
+		AE2E5232285D8036004E6FA1 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE2E522C285D8036004E6FA1 /* NotoSansKR-Thin.otf */; };
+		AE2E5233285D8036004E6FA1 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE2E522D285D8036004E6FA1 /* NotoSansKR-Regular.otf */; };
 		AE3D91E02807F5310045721C /* GongGalBBangApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */; };
 		AE3D91E42807F5310045721C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3D91E32807F5310045721C /* Assets.xcassets */; };
 		AE3D91E72807F5310045721C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3D91E62807F5310045721C /* Preview Assets.xcassets */; };
-		AE3D91EF2807F55A0045721C /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91EE2807F55A0045721C /* LogInView.swift */; };
+		AE3D91EF2807F55A0045721C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91EE2807F55A0045721C /* LoginView.swift */; };
 		AE3D91F12807F59B0045721C /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91F02807F59B0045721C /* RoomListView.swift */; };
 		AE3D91F32807F5A30045721C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91F22807F5A30045721C /* SignUpView.swift */; };
 		AE3D91F62807F5EB0045721C /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D91F52807F5EB0045721C /* ButtonStyles.swift */; };
@@ -55,12 +68,25 @@
 		AE1207EC285B20B700BDBC8E /* FindIdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIdView.swift; sourceTree = "<group>"; };
 		AE1207EE285B224100BDBC8E /* ChangePwView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePwView.swift; sourceTree = "<group>"; };
 		AE1207F0285B2B9E00BDBC8E /* ChangePwReqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePwReqView.swift; sourceTree = "<group>"; };
+		AE1207F6285B3AF300BDBC8E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		AE1207F8285B505700BDBC8E /* SuccessChangePwView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessChangePwView.swift; sourceTree = "<group>"; };
+		AE1207FA285B63AF00BDBC8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AE1207FD285C664F00BDBC8E /* TutorialSplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialSplashView.swift; sourceTree = "<group>"; };
+		AE120803285CAA9100BDBC8E /* TutorialMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMainView.swift; sourceTree = "<group>"; };
+		AE120805285CD3DA00BDBC8E /* TutorialRoomDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialRoomDetail.swift; sourceTree = "<group>"; };
+		AE120807285D6D7B00BDBC8E /* MypageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageView.swift; sourceTree = "<group>"; };
 		AE206BC3281442FD00A609BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AE2E5228285D8035004E6FA1 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		AE2E5229285D8035004E6FA1 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
+		AE2E522A285D8035004E6FA1 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
+		AE2E522B285D8035004E6FA1 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		AE2E522C285D8036004E6FA1 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
+		AE2E522D285D8036004E6FA1 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		AE3D91DC2807F5310045721C /* GongGalBBang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GongGalBBang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GongGalBBangApp.swift; sourceTree = "<group>"; };
 		AE3D91E32807F5310045721C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE3D91E62807F5310045721C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AE3D91EE2807F55A0045721C /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		AE3D91EE2807F55A0045721C /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AE3D91F02807F59B0045721C /* RoomListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 		AE3D91F22807F5A30045721C /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		AE3D91F52807F5EB0045721C /* ButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
@@ -96,6 +122,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE1207FC285B643300BDBC8E /* tutorials */ = {
+			isa = PBXGroup;
+			children = (
+				AE1207FD285C664F00BDBC8E /* TutorialSplashView.swift */,
+				AE120803285CAA9100BDBC8E /* TutorialMainView.swift */,
+				AE120805285CD3DA00BDBC8E /* TutorialRoomDetail.swift */,
+			);
+			path = tutorials;
+			sourceTree = "<group>";
+		};
+		AE2E5227285D7FE1004E6FA1 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				AE2E5229285D8035004E6FA1 /* NotoSansKR-Black.otf */,
+				AE2E5228285D8035004E6FA1 /* NotoSansKR-Bold.otf */,
+				AE2E522A285D8035004E6FA1 /* NotoSansKR-Light.otf */,
+				AE2E522B285D8035004E6FA1 /* NotoSansKR-Medium.otf */,
+				AE2E522D285D8036004E6FA1 /* NotoSansKR-Regular.otf */,
+				AE2E522C285D8036004E6FA1 /* NotoSansKR-Thin.otf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
 		AE3D91D32807F5310045721C = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +166,9 @@
 		AE3D91DE2807F5310045721C /* GongGalBBang */ = {
 			isa = PBXGroup;
 			children = (
+				AE2E5227285D7FE1004E6FA1 /* font */,
 				AE3D91DF2807F5310045721C /* GongGalBBangApp.swift */,
+				AE1207FC285B643300BDBC8E /* tutorials */,
 				AE3D91ED2807F5370045721C /* views */,
 				AE3D91FA28080CDA0045721C /* places */,
 				AE3D920928101B830045721C /* helpers */,
@@ -129,6 +180,7 @@
 				20DEB785281D1A9700B7C1D8 /* Bridging_Header.h */,
 				20DEB786281D1AD100B7C1D8 /* Empty.swift */,
 				20DEB788281D1AFE00B7C1D8 /* OUTPUTDBtoAPIGatewayAPIClient.swift */,
+				AE1207F6285B3AF300BDBC8E /* Launch Screen.storyboard */,
 			);
 			path = GongGalBBang;
 			sourceTree = "<group>";
@@ -144,15 +196,18 @@
 		AE3D91ED2807F5370045721C /* views */ = {
 			isa = PBXGroup;
 			children = (
-				AE3D91F02807F59B0045721C /* RoomListView.swift */,
+				AE1207FA285B63AF00BDBC8E /* ContentView.swift */,
+				AE3D91EE2807F55A0045721C /* LoginView.swift */,
 				AE3D91F22807F5A30045721C /* SignUpView.swift */,
-				AE3D91EE2807F55A0045721C /* LogInView.swift */,
-				AE206BC3281442FD00A609BB /* MainView.swift */,
 				AEC5C48B2859BDEB00939A61 /* AccountView.swift */,
-				AE1207EA285B203600BDBC8E /* SuccessGetIdView.swift */,
 				AE1207EC285B20B700BDBC8E /* FindIdView.swift */,
+				AE1207EA285B203600BDBC8E /* SuccessGetIdView.swift */,
 				AE1207EE285B224100BDBC8E /* ChangePwView.swift */,
 				AE1207F0285B2B9E00BDBC8E /* ChangePwReqView.swift */,
+				AE1207F8285B505700BDBC8E /* SuccessChangePwView.swift */,
+				AE206BC3281442FD00A609BB /* MainView.swift */,
+				AE3D91F02807F59B0045721C /* RoomListView.swift */,
+				AE120807285D6D7B00BDBC8E /* MypageView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -273,7 +328,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE2E5230285D8036004E6FA1 /* NotoSansKR-Light.otf in Resources */,
+				AE2E5233285D8036004E6FA1 /* NotoSansKR-Regular.otf in Resources */,
+				AE1207F7285B3AF300BDBC8E /* Launch Screen.storyboard in Resources */,
+				AE2E5231285D8036004E6FA1 /* NotoSansKR-Medium.otf in Resources */,
 				AE3D91E72807F5310045721C /* Preview Assets.xcassets in Resources */,
+				AE2E5232285D8036004E6FA1 /* NotoSansKR-Thin.otf in Resources */,
+				AE2E522E285D8036004E6FA1 /* NotoSansKR-Bold.otf in Resources */,
+				AE2E522F285D8036004E6FA1 /* NotoSansKR-Black.otf in Resources */,
 				AE3D91E42807F5310045721C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,14 +390,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE1207F1285B2B9E00BDBC8E /* ChangePwReqView.swift in Sources */,
-				AE3D91EF2807F55A0045721C /* LogInView.swift in Sources */,
+				AE3D91EF2807F55A0045721C /* LoginView.swift in Sources */,
+				AE1207FB285B63AF00BDBC8E /* ContentView.swift in Sources */,
 				AEC5C484285662DD00939A61 /* RegisterResponse.swift in Sources */,
+				AE120804285CAA9100BDBC8E /* TutorialMainView.swift in Sources */,
 				AE4115522853398300F459F3 /* PostLogin.swift in Sources */,
 				AE1207EF285B224100BDBC8E /* ChangePwView.swift in Sources */,
 				AE411529283B672700F459F3 /* Helpers.swift in Sources */,
 				AEC5C4822856629900939A61 /* RegisterRequest.swift in Sources */,
 				AEC5C4882859ADC900939A61 /* AccountRequest.swift in Sources */,
 				AE41154E284B375600F459F3 /* RoomRequest.swift in Sources */,
+				AE1207FE285C664F00BDBC8E /* TutorialSplashView.swift in Sources */,
 				AE3D920428080D910045721C /* Place.swift in Sources */,
 				AE3D91F32807F5A30045721C /* SignUpView.swift in Sources */,
 				AEC5C4862859AD7100939A61 /* PostAccount.swift in Sources */,
@@ -345,6 +410,8 @@
 				AE008DBC285499D60024D927 /* PostRegister.swift in Sources */,
 				AE3D91F62807F5EB0045721C /* ButtonStyles.swift in Sources */,
 				20DEB787281D1AD100B7C1D8 /* Empty.swift in Sources */,
+				AE120808285D6D7B00BDBC8E /* MypageView.swift in Sources */,
+				AE1207F9285B505700BDBC8E /* SuccessChangePwView.swift in Sources */,
 				AE411554285339E900F459F3 /* LoginRequest.swift in Sources */,
 				AE3D91E02807F5310045721C /* GongGalBBangApp.swift in Sources */,
 				AEC5C48A2859B20C00939A61 /* AccountResponse.swift in Sources */,
@@ -357,6 +424,7 @@
 				AE3D920228080D730045721C /* ModelData.swift in Sources */,
 				AEC5C48C2859BDEB00939A61 /* AccountView.swift in Sources */,
 				AE411550284C7A2F00F459F3 /* RoomResponse.swift in Sources */,
+				AE120806285CD3DA00BDBC8E /* TutorialRoomDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +559,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GongGalBBang/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -521,6 +590,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GongGalBBang/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

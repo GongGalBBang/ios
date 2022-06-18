@@ -26,18 +26,21 @@ struct AccountView: View {
     var body: some View {
         NavigationView {
             VStack{
+                Divider()
+                    .padding(.top, 91)
                 CustomTopTabBar(tabIndex: $tabIndex)
                     .padding(.top, 10)
                 if tabIndex == 0 {
                     FindIdView(parent: self)
                 }
                 else if tabIndex == 1 {
-                    ChangePwView()
+                    ChangePwView(parent: self)
                 }
                 Spacer()
             }
             .frame(width: UIScreen.main.bounds.width - 24, alignment: .center)
             .padding(.horizontal)
+            .edgesIgnoringSafeArea(.all)
             .navigationTitle("계정 찾기")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {

@@ -58,6 +58,7 @@ struct FindIdView: View{
                     .padding(.bottom, 20)
                 }
             
+                Spacer()
                 Button(action: {
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
                         if(fullName == "" || tmpPhoneNumber == "") {

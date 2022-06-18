@@ -24,6 +24,7 @@ struct SuccessGetIdView: View{
                 .multilineTextAlignment(.leading)
                 .foregroundColor(.black)
                 .padding(.bottom,30)
+            Spacer()
             Button(action: {
                 parent.getBack()
                 presentationMode.wrappedValue.dismiss()

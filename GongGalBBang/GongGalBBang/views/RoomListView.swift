@@ -10,16 +10,21 @@ import Foundation
 
 struct RoomListView: View {
     @State private var showFavoritesOnly = false
+    @EnvironmentObject var modelData: ModelData
     
     @StateObject private var getRoomL = GetRoom()
     var major : String
     var club : String
     
-//    var filteredLandmarks: [Place] {
-//        modelData.places.filter { place in
-//            (!showFavoritesOnly || place.isFavorite)
-//        }
-//    }
+    @State private var starList : [String:Bool] = [:]
+    
+    var filteredRoom: [RoomResult] {
+        getRoomL.res.filter { room in
+            let name = getRoomName(room:room)
+            let isSet = UserDefaults.standard.bool(forKey: name)
+            return (!showFavoritesOnly || isSet)
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -30,25 +35,21 @@ struct RoomListView: View {
                         Text("원하는 방만 보기")
                             .fontWeight(.bold)
                     }
-                    ForEach(getRoomL.res, id: \.self) { room in
+                    ForEach(filteredRoom, id: \.self) { room in
+                        let name = getRoomName(room:room)
                         NavigationLink {
-                            PlaceDetail(room: room).navigationBarHidden(true)
+                            PlaceDetail(room: room, star: starList[name]!).navigationBarHidden(true)
                         } label: {
-                            PlaceRow(room: room)
+                            PlaceRow(room: room, isSet: starList[name]!)
                         }
                     }
-//                    ForEach(filteredLandmarks, id: \.id) { place in
-//                        NavigationLink {
-//                            PlaceDetail(place: place).navigationBarHidden(true)
-//                        } label: {
-//                            PlaceRow(place: place)
-//                        }
-//                    }
                     Spacer()
                 }
-                .edgesIgnoringSafeArea(.all)
-                .navigationTitle("방 목록")
-                .navigationBarTitleDisplayMode(.inline)
+            }
+            .navigationTitle("방 목록")
+            .navigationBarTitleDisplayMode(.inline)
+            .onAppear{
+                starList = getStars()
             }
         }
         .onAppear {
@@ -62,34 +63,6 @@ struct RoomListView: View {
         }
     }
 }
-
-//
-//        VStack {
-//            Button(action: {
-//                print("room tapped!")
-//            }) {
-//                Text("휴게 공간 확인하기")
-//                    .foregroundColor(.black)
-//                    .fontWeight(.semibold)
-//                    .font(.system(size: 17))
-//                    .frame(width: 150, height: 20, alignment: .center)
-//            }
-//            .buttonStyle(LoginStyle())
-//            .padding()
-//
-//            Button(action: {
-//                print("mypage tapped!")
-//            }) {
-//                Text("마이페이지")
-//                    .foregroundColor(.black)
-//                    .fontWeight(.semibold)
-//                    .font(.system(size: 17))
-//                    .frame(width: 150, height: 20, alignment: .center)
-//            }
-//            .buttonStyle(LoginStyle())
-//            .padding()
-//        }
-
 
 struct RoomListViewView_Previews:
     PreviewProvider {

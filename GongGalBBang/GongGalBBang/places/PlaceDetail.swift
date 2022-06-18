@@ -58,6 +58,7 @@ struct PlaceDetail: View {
     @EnvironmentObject var getRoom: GetRoom
     @Environment(\.presentationMode) var presentationMode
     var room: RoomResult
+    @State var star : Bool
     
     var roomIndex: Int {
         getRoom.res.firstIndex(where: {$0.className == room.className})!
@@ -68,42 +69,46 @@ struct PlaceDetail: View {
         let name = getRoomName(room:room)
         
         NavigationView {
-            ScrollView() {
-                VStack{
-                    Image(name).resizable().frame(width: 200, height: 200)
-                    HStack {
-                        Text(name)
-                            .font(.body)
-//                        FavoriteButton(isSet: $getRoom.rooms[roomIndex].isFavorite)
-                    }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
-                    
-                    let hour = getHour()
-                    let confuse = getConfuse(date: room.data, time: hour)
-                                   
-                    HStack {
-                        Text("현재 \(hour)시 혼잡도: ")
-                        Text(confuse).foregroundColor(getConfuseColor(confuse: confuse))
-                    }
-                    
-                    Divider()
-                        .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
-                    
-                    Text("시간대 별 인원 추이")
-                        .fontWeight(.bold)
-                        .frame(alignment: .leading)
-                    VStack {
-                        Text("그래프")
-                            .font(.body)
-                        LineChartView(date: room.data)
-                    }.frame(width: .infinity, height: 250)
-                    .foregroundColor(.black)
-                    Spacer()
+            VStack{
+                Divider()
+                    .padding(.top, 71)
+                Image(name).resizable().frame(width: 200, height: 200)
+                HStack {
+                    Text(name)
+                        .font(.body)
+                    FavoriteButton(name: .constant(name), isSet: $star)
                 }
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
+                
+                let hour = getHour()
+                let confuse = getConfuse(date: room.data, time: hour)
+                               
+                HStack {
+                    Text("현재 \(hour)시 혼잡도: ")
+                    Text(confuse).foregroundColor(getConfuseColor(confuse: confuse))
+                }
+                
+                Divider()
+                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                
+                Text("시간대 별 인원 추이")
+                    .fontWeight(.bold)
+                    .frame(alignment: .leading)
+                VStack {
+                    Text("그래프")
+                        .font(.body)
+                    LineChartView(date: room.data)
+                }.frame(width: .infinity, height: 250)
+                .foregroundColor(.black)
+                Spacer()
+            }
+            .onAppear{
+                star = UserDefaults.standard.bool(forKey: name)
             }
             .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
-            .navigationBarTitleDisplayMode(.inline)
+            .edgesIgnoringSafeArea(.all)
             .navigationTitle(name)
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
@@ -114,39 +119,11 @@ struct PlaceDetail: View {
                 }
             })
         }
-//        ScrollView{
-//            MapView(coordinate: place.locationCoordinate)
-//                .ignoresSafeArea(edges:.top)
-//                .frame(height:300)
-//            CircleImage(image: landmark.image)
-//                .offset(y:-130)
-//                .padding(.bottom, -130)
-//            VStack(alignment: .leading) {
-//                Text(landmark.name)
-//                    .font(.title)
-//                HStack{
-//                    Text(landmark.park)
-//                        .font(.subheadline)
-//                    Spacer()
-//                    Text(landmark.state)
-//                        .font(.subheadline)
-//                }
-//                .font(.subheadline)
-//                .foregroundColor(.secondary)
-//                Divider()
-//                Text("About \(landmark.name)")
-//                    .font(.title2)
-//                Text(landmark.description)
-//            }
-//            .padding()
-//            .navigationTitle(landmark.name)
-//            .navigationBarTitleDisplayMode(.inline)
-//        }
     }
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceDetail(room: RoomResult(className: 101, data: [Datee(date: "10", member: 3), Datee(date: "11", member: 4), Datee(date: "12", member: 3), Datee(date: "13", member: 6), Datee(date: "14", member: 8), Datee(date: "15", member: 10)]))
+        PlaceDetail(room: RoomResult(className: 101, data: [Datee(date: "10", member: 3), Datee(date: "11", member: 4), Datee(date: "12", member: 3), Datee(date: "13", member: 6), Datee(date: "14", member: 8), Datee(date: "15", member: 10)]), star: false)
     }
 }

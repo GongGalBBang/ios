@@ -48,11 +48,16 @@ struct CheckboxStyle: ToggleStyle {
 }
 
 struct FavoriteButton: View {
+    @Binding var name : String
     @Binding var isSet: Bool
     
     var body: some View{
         Button {
             isSet.toggle()
+            UserDefaults.standard.set(isSet, forKey: name)
+            print("click")
+            print(name)
+            print(isSet)
         } label: {
             Label("Toggle Favorite", systemImage: isSet ? "star.fill" : "star")
                 .labelStyle(.iconOnly)

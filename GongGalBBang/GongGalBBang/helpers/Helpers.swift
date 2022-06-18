@@ -289,7 +289,7 @@ func getClubSelected(clubSelectedItems : [Club]) -> String {
 }
 
 func getConfuse(date: [Datee], time: String) -> String {
-    var ans = ""
+    var ans = "확인 불가"
     for date in date {
         if(date.date == time) {
             switch date.member {
@@ -337,4 +337,17 @@ func phoneformat(num : String) -> String{
     let modString = regex!.stringByReplacingMatches(in: num, options: [], range: NSRange(num.startIndex..., in: num), withTemplate: "$1-$2-$3")
 
     return modString
+}
+
+func getStars() -> [String:Bool] {
+    var ans : [String:Bool] = [:]
+    
+    for name in Major.allCases {
+        ans[name.rawValue] = UserDefaults.standard.bool(forKey: name.rawValue)
+    }
+    
+    for name in Club.allCases {
+        ans[name.rawValue] = UserDefaults.standard.bool(forKey: name.rawValue)
+    }
+    return ans
 }

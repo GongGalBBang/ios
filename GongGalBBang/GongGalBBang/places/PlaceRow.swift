@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PlaceRow: View {
     var room: RoomResult
+    let isSet: Bool
     
     var body: some View {
         let name = getRoomName(room:room)
@@ -22,10 +23,10 @@ struct PlaceRow: View {
             
             Spacer()
             
-//            if place.isFavorite {
-//                Image(systemName: "star.fill")
-//                    .foregroundColor(.yellow)
-//            }
+            if isSet {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+            }
         }
     }
 }
@@ -33,7 +34,7 @@ struct PlaceRow: View {
 struct PlaceRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            PlaceRow(room: RoomResult(className: 101, data: [Datee(date: "10", member: 3), Datee(date: "11", member: 4)]))
+            PlaceRow(room: RoomResult(className: 101, data: [Datee(date: "10", member: 3), Datee(date: "11", member: 4)]), isSet: true)
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

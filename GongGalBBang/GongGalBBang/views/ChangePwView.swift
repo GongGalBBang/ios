@@ -18,17 +18,27 @@ struct ChangePwView: View{
     @State var showingToast = false
     @State var showingToastTitle = ""
     @State var showingToastMessage = ""
+    @State var req = AccountRequest(function_case: 0, user_name: "")
     
     @StateObject private var postAccount = PostAccount()
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @State var STATE : Int? = 0
+    
+    var parent : AccountView
+    
+    func getBack() {
+        parent.getBack()
+        presentationMode.wrappedValue.dismiss()
+    }
     
     var body: some View{
         NavigationView {
             VStack {
-//                NavigationLink(destination: SuccessGetIdView(accountRes: postAccount.res).navigationBarHidden(true), tag: 1, selection: $STATE) {
-//                    EmptyView()
-//                }
+                NavigationLink(destination: ChangePwReqView(req: req, parent: self).navigationBarHidden(true), tag: 1, selection: $STATE) {
+                    EmptyView()
+                }
                 VStack(alignment: .leading) {
                     Text("정보를 입력해주세요.")
                         .padding(.bottom,20)
@@ -58,6 +68,7 @@ struct ChangePwView: View{
                     )
                     .padding(.bottom, 20)
                 }
+                Spacer()
                 
                 Button(action: {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -84,11 +95,13 @@ struct ChangePwView: View{
                         else {
                             
                             let phoneNumber = phoneformat(num: tmpPhoneNumber)
-                            let req = AccountRequest(function_case: 0, phoneNumber: phoneNumber, user_name: fullName)
+                            req = AccountRequest(function_case: 0, phoneNumber: phoneNumber, user_name: fullName)
                             postAccount.postAccount(accountReq: req)
                             
                             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
                                 if(postAccount.res.statusCode == 200) {
+                                    req.function_case = 1
+                                    req.user_id = emailAddress
                                     STATE = 1
                                 }
                                 else if(postAccount.res.statusCode == 403) {
@@ -115,6 +128,6 @@ struct ChangePwView: View{
 
 struct ChangePwView_Previews: PreviewProvider {
     static var previews: some View {
-        ChangePwView()
+        ChangePwView(parent: AccountView())
     }
 }
