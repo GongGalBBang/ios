@@ -55,6 +55,7 @@ struct FindIdView: View{
                         unformattedText: $tmpPhoneNumber, placeholder: "Enter your Phone Number",
                         textPattern: "###-####-####"
                     )
+                    .keyboardType(.decimalPad)
                     .padding(.bottom, 20)
                 }
             

@@ -26,7 +26,8 @@ class PostRegister: ObservableObject {
                                    "user_id" : registerReq.user.user_id,
                                    "user_pw" : registerReq.user.user_pw,
                                    "department" : registerReq.department,
-                                   "circle" : registerReq.circle]
+                                   "circle" : registerReq.circle,
+                                   "phoneNumber": registerReq.phoneNumber]
         
         print(body)
         

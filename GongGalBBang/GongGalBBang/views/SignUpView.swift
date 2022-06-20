@@ -13,7 +13,7 @@ struct SignUpView: View {
     @State var fullName = ""
     @State var emailAddress = ""
     @State var password = ""
-    @State var phoneNumber = ""
+    @State var tmpPhoneNumber = ""
     @State var emailUpdate = false
     @Environment(\.presentationMode) var presentationMode
     @State var STATE: Int? = 0
@@ -55,6 +55,7 @@ struct SignUpView: View {
                                     .foregroundColor(.black)
                                     .padding(.top, 10)
                                 TextField("Enter your Email", text: $emailAddress)
+                                    .autocapitalization(.none)
                                     .textFieldStyle(.roundedBorder)
                                     .multilineTextAlignment(.leading)
                                     .foregroundColor(.black)
@@ -71,9 +72,10 @@ struct SignUpView: View {
                                     .foregroundColor(.black)
                                     .padding(.top, 10)
                                 FormatTextField(
-                                    unformattedText: $phoneNumber, placeholder: "Enter your Phone Number",
+                                    unformattedText: $tmpPhoneNumber, placeholder: "Enter your Phone Number",
                                     textPattern: "###-####-####"
                                 )
+                                .keyboardType(.decimalPad)
                                 .padding(.bottom, 20)
                             }
                             
@@ -144,7 +146,9 @@ struct SignUpView: View {
                                         let major = getMajorSelected(majorSelectedItems: majorSelectedItems)
                                         let club = getClubSelected(clubSelectedItems: clubSelectedItems)
                                         
-                                        let req = RegisterRequest(name: fullName, user: user, department: major, circle: club)
+                                        let phoneNumber = phoneformat(num: tmpPhoneNumber)
+                                        
+                                        let req = RegisterRequest(name: fullName, user: user, department: major, circle: club, phoneNumber: phoneNumber)
                                         
                                         postRegister.postRegister(registerReq: req)
                                         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {

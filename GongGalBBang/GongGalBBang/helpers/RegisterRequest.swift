@@ -12,4 +12,5 @@ struct RegisterRequest: Hashable, Codable {
     var user : LoginRequest
     var department: String
     var circle : String
+    var phoneNumber : String
 }

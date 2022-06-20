@@ -55,6 +55,7 @@ struct ChangePwView: View{
                         .foregroundColor(.black)
                         .padding(.top, 10)
                     TextField("Enter your Email", text: $emailAddress)
+                        .autocapitalization(.none)
                         .textFieldStyle(.roundedBorder)
                         .multilineTextAlignment(.leading)
                         .foregroundColor(.black)
@@ -66,6 +67,7 @@ struct ChangePwView: View{
                         unformattedText: $tmpPhoneNumber, placeholder: "Enter your Phone Number",
                         textPattern: "###-####-####"
                     )
+                    .keyboardType(.decimalPad)
                     .padding(.bottom, 20)
                 }
                 Spacer()

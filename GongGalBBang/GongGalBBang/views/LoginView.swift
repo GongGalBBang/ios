@@ -49,6 +49,7 @@ struct LoginView: View {
                         VStack(alignment: .leading) {
                             Text("이메일")
                             TextField("Enter your Email address", text: $emailAddress)
+                                .autocapitalization(.none)
                                 .textFieldStyle(.roundedBorder)
                         }
                         
