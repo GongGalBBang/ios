@@ -10,7 +10,6 @@ import Foundation
 
 struct RoomListView: View {
     @State private var showFavoritesOnly = false
-    @EnvironmentObject var modelData: ModelData
     
     @StateObject private var getRoomL = GetRoom()
     var major : String
@@ -38,9 +37,13 @@ struct RoomListView: View {
                     ForEach(filteredRoom, id: \.self) { room in
                         let name = getRoomName(room:room)
                         NavigationLink {
-                            PlaceDetail(room: room, star: starList[name]!).navigationBarHidden(true)
+                            if(starList[name] != nil) {
+                                PlaceDetail(room: room, star: starList[name]!).navigationBarHidden(true)
+                            }
                         } label: {
-                            PlaceRow(room: room, isSet: starList[name]!)
+                            if(starList[name] != nil) {
+                                PlaceRow(room: room, isSet: starList[name]!)
+                            }
                         }
                     }
                     Spacer()
@@ -67,6 +70,6 @@ struct RoomListView: View {
 struct RoomListViewView_Previews:
     PreviewProvider {
         static var previews: some View {
-            RoomListView(major: "1", club: "1").environmentObject(GetRoom())
+            RoomListView(major: "2", club: "1").environmentObject(GetRoom())
         }
 }

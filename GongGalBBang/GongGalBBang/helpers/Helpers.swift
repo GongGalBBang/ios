@@ -166,17 +166,17 @@ struct MajorSelectPickerView: View {
 }
 
 func getRoomName(room : RoomResult) -> String {
-    if(room.className < 200) {
+    if(room.className >= 200) {
         switch room.className {
-        case 101:
+        case 201:
             return Major.allCases[0].rawValue
-        case 102:
+        case 202:
             return Major.allCases[1].rawValue
-        case 103:
+        case 203:
             return Major.allCases[2].rawValue
-        case 104:
+        case 204:
             return Major.allCases[3].rawValue
-        case 105:
+        case 205:
             return Major.allCases[4].rawValue
         default:
             return "."
@@ -184,15 +184,15 @@ func getRoomName(room : RoomResult) -> String {
     }
     else {
         switch room.className {
-        case 200:
+        case 100:
             return Club.allCases[0].rawValue
-        case 201:
+        case 101:
             return Club.allCases[1].rawValue
-        case 202:
+        case 102:
             return Club.allCases[2].rawValue
-        case 203:
+        case 103:
             return Club.allCases[3].rawValue
-        case 204:
+        case 104:
             return Club.allCases[4].rawValue
         default:
             return "."

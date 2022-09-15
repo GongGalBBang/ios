@@ -60,6 +60,7 @@ struct LoginView: View {
                         }
                         Button(action: {
                             UserDefaults.standard.set(false, forKey: "tutorial")
+                            print(self.$res.res)
                             if(emailAddress == "" || password == "") {
                                 showingToast = true
                                 showingToastTitle = "오류"
@@ -76,7 +77,7 @@ struct LoginView: View {
                                 showingToastMessage = "올바른 비밀번호 형식을 입력해주세요"
                             }
                             else {
-                                let req = LoginRequest(user_id : emailAddress, user_pw : password)
+                                let req = LoginRequest(user_id : emailAddress, user_pw : password)  
                                 postLogin.postUser(loginReq: req)
                                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
                                     if(postLogin.res.statusCode == 200) {
